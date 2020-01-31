@@ -11,6 +11,10 @@ const Inventory = preload("inventory.gd")
 var inventory
 var posItems = {Zone.new(Vector2(0,0)):Item.new()}
 
+func addZoneWithItem(zone,item):
+	posItems.keys().append(zone)
+	posItems[zone] = item
+
 func pickUpAt(pos):
 	for zone in posItems.keys():
 		if zone.contains(pos):
@@ -18,8 +22,10 @@ func pickUpAt(pos):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	addZoneWithItem(Zone.new(Vector2(1,1)),Item.new("Guitar"))
 	inventory = Inventory.new()
-	pickUpAt(Vector2(0.5,0.5))
+	
+	pickUpAt(Vector2(1.5,1.5))
 	pass # Replace with function body.
 
 
