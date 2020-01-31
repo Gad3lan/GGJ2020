@@ -8,14 +8,38 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Node",
+"class": "EnvironmentItemInteraction",
+"language": "GDScript",
+"path": "res://environmentItemInteraction.gd"
+}, {
+"base": "Panel",
+"class": "Inventory",
+"language": "GDScript",
+"path": "res://inventory.gd"
+}, {
+"base": "Node",
+"class": "Item",
+"language": "GDScript",
+"path": "res://item.gd"
+}, {
+"base": "Node",
+"class": "Zone",
+"language": "GDScript",
+"path": "res://itemZone.gd"
+} ]
 _global_script_class_icons={
-
+"EnvironmentItemInteraction": "",
+"Inventory": "",
+"Item": "",
+"Zone": ""
 }
 
 [application]
 
 config/name="Remind to Repair"
+run/main_scene="res://inventory.tscn"
 config/icon="res://icon.png"
 
 [rendering]
