@@ -1,22 +1,22 @@
-extends Panel
+extends Node2D
 
 
 
 class_name Inventory
 
-onready var itemList = get_node("ItemList")
+
 
 const Item = preload("item.gd")
 
 var item = null
 func setItem(itemToSet):
+	print("hey")
 	item = itemToSet
 	print(item._to_string())
 	pass
 
 func isItemRepaired():
 	return item.isRepaired()
-
 
 
 func hasItem():
