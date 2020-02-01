@@ -129,7 +129,7 @@ rotation = 0.392699
 shape = SubResource( 5 )
 
 [node name="Grande Aiguille" type="Node2D" parent="Object"]
-position = Vector2( -483.582, 102.509 )
+position = Vector2( -492.148, 93.4401 )
 
 [node name="Area2D" type="Area2D" parent="Object/Grande Aiguille"]
 position = Vector2( 651.374, 277.907 )
