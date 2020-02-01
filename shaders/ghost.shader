@@ -27,6 +27,6 @@ void fragment(){
 	
     vec4 shadow = vec4(modulate.rgb, texture(TEXTURE, UV - offset*ps).a*modulate.a);
     vec4 col = texture(TEXTURE, UV);
-	col.a *= noise((UV+vec2(sin(TIME) * fract(TIME),cos(TIME) * fract(TIME)))*5.);
+	col.a *= noise((UV+vec2(sin(TIME) * fract(TIME/10.),cos(TIME/10.) * fract(TIME)))*8.);
     COLOR = col;
 }
