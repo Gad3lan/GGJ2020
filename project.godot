@@ -9,7 +9,7 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Node",
+"base": "Node2D",
 "class": "EnvironmentItemInteraction",
 "language": "GDScript",
 "path": "res://Scripts/environmentItemInteraction.gd"
@@ -39,7 +39,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Remind to Repair"
-run/main_scene="res://Scenes/TestClick.tscn"
+run/main_scene="res://Scenes/Reveil.tscn"
 config/icon="res://icon.png"
 
 [rendering]
