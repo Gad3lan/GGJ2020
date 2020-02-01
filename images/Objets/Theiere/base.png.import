@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ddpjhwz-e3cee051-1809-478e-89d3-0a2db7286897.png-674cc4bca34b4b0a5bc021f851c411ed.stex"
+path="res://.import/base.png-f3aab30ec882d7f7a9a283d8e60f6aa6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/Objets/Vase/ddpjhwz-e3cee051-1809-478e-89d3-0a2db7286897.png"
-dest_files=[ "res://.import/ddpjhwz-e3cee051-1809-478e-89d3-0a2db7286897.png-674cc4bca34b4b0a5bc021f851c411ed.stex" ]
+source_file="res://images/Objets/Theiere/base.png"
+dest_files=[ "res://.import/base.png-f3aab30ec882d7f7a9a283d8e60f6aa6.stex" ]
 
 [params]
 
