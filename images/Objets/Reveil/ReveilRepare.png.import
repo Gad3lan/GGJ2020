@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ReveilRepare.png-f2062916b3768ee56a13f28469c5101f.stex"
+path="res://.import/ReveilRepare.png-48f8264c98c41cbe1ab8fa08248f685e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/Objets/Reveil/ReveilRepare.png"
-dest_files=[ "res://.import/ReveilRepare.png-f2062916b3768ee56a13f28469c5101f.stex" ]
+source_file="res://images/Objets/Reveil/ReveilRepare.png"
+dest_files=[ "res://.import/ReveilRepare.png-48f8264c98c41cbe1ab8fa08248f685e.stex" ]
 
 [params]
 

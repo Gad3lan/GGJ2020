@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ReveilCloche.png-7aa62028de59224688014bb6c0b9001b.stex"
+path="res://.import/ReveilCloche.png-bdcf6e0bc1656177221bef4dfcdbc86c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/Objets/Reveil/ReveilCloche.png"
-dest_files=[ "res://.import/ReveilCloche.png-7aa62028de59224688014bb6c0b9001b.stex" ]
+source_file="res://images/Objets/Reveil/ReveilCloche.png"
+dest_files=[ "res://.import/ReveilCloche.png-bdcf6e0bc1656177221bef4dfcdbc86c.stex" ]
 
 [params]
 
