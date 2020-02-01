@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=3 format=2]
 
+<<<<<<< HEAD
 [ext_resource path="res://images/plan global.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/character.tscn" type="PackedScene" id=2]
 
@@ -67,6 +68,14 @@ shape = SubResource( 3 )
 [node name="StaticBody2D5" type="StaticBody2D" parent="."]
 position = Vector2( 5.30017, 210.588 )
 physics_material_override = SubResource( 4 )
+=======
+[ext_resource path="res://Scenes/character.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/fantome.tscn" type="PackedScene" id=2]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5"]
-shape = SubResource( 5 )
+[node name="Node2D" type="Node2D"]
+
+[node name="player" parent="." instance=ExtResource( 1 )]
+>>>>>>> fc4dec3170156c2d4180ac15991b7828619ae2c2
+
+[node name="ghost" parent="." instance=ExtResource( 2 )]
+position = Vector2( -540.611, 171.054 )
