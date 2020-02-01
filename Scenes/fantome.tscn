@@ -45,6 +45,6 @@ shape = SubResource( 1 )
 material = SubResource( 5 )
 position = Vector2( -300.702, 310.402 )
 frames = SubResource( 2 )
-frame = 1
+frame = 2
 playing = true
 flip_h = true
