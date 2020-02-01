@@ -13,7 +13,7 @@ var inventory
 var posItems = {Zone.new(Vector2(0,0)):Item.new()}
 
 func _unhandled_input(event):
-	if Input.is_action_pressed("test"):
+	if Input.is_action_pressed("pickup_item"):
 		print("test")
 		print("getPlayerPos : ")
 		print(getPlayerPos())

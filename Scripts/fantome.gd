@@ -16,7 +16,6 @@ func playerDirection():
 	return (playerToChase.position - self.position).normalized()
 
 func moveVector(delta):
-	print(velocity.length())
 	velocity = (velocity + (acc*playerDirection())) *(1- velocity.length() * maxSpeedInv)
 	return velocity
 
