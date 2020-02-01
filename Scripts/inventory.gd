@@ -9,7 +9,7 @@ var itemVirtualObject
 var itemScene = null
 
 func addItemScene(itemName):
-	var itemScene = load("res://"+itemName+".tscn")
+	var itemScene = load("res://Scenes/"+itemName+".tscn")
 	itemScene = itemScene.instance()
 	call_deferred("add_child",itemScene)
 	
