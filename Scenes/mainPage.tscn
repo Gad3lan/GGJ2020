@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://images/Objets/Fonds/ddpiuv4-7371ec1d-b92d-4459-b620-a493e8156f6a.png" type="Texture" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="Area2D"]
+margin_left = -1330.16
+margin_top = -264.269
+margin_right = 2509.84
+margin_bottom = 815.731
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
