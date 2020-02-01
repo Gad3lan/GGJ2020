@@ -20,15 +20,19 @@ func moveRight():
 		velocity.x = +SPEED
 func idle():
 	$AnimatedSprite.animation = "idle"
+	print(get_parent())
+	get_parent().get_node("Node2D/AnimatedSprite").scale.y = 0.9 - (sin(OS.get_ticks_msec()/500.0)+1)/40
 	velocity.x = 0
 func jump():
 	if is_on_floor():
 		on_floor = false
 		$AnimatedSprite.animation = "jump"
 		velocity.y = -JUMP
-	
-func  _process(delta):
 
+var hasToIdle : bool
+
+func  _process(delta):
+	hasToIdle = true
 	if velocity.length() != 0:
 		$AnimatedSprite.play()
 	else:
@@ -36,19 +40,24 @@ func  _process(delta):
 		
 	if Input.is_action_pressed("ui_left") and is_on_floor():
 		moveLeft()
-	elif Input.is_action_pressed("ui_right") and is_on_floor():
+		hasToIdle = false
+	if Input.is_action_pressed("ui_right") and is_on_floor():
 		moveRight()
-	elif Input.is_action_pressed("ui_up") and is_on_floor():
+		hasToIdle = false
+	if Input.is_action_pressed("ui_up") and is_on_floor():
 		jump()
+		hasToIdle = false
+	
 	else:
 		if (is_on_floor()):
-			idle()
 			on_floor = true
+			if(hasToIdle):
+				idle()
 		else:
 			$AnimatedSprite.animation = "jump"
 			velocity.y +=G
 		
-		
+	print(velocity.x)
 	move_and_slide(velocity, Vector2( 0,-1 ))
 
 
