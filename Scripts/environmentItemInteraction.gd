@@ -18,7 +18,6 @@ func _unhandled_input(event):
 		print("getPlayerPos : ")
 		print(getPlayerPos())
 		pickUpAt(Vector2(1.5,1.5))
-		
 
 
 func getPlayerPos():	
@@ -38,6 +37,7 @@ func pickUpAt(pos):
 			
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
 	addZoneWithItem(Zone.new(Vector2(1,1)),Item.new("TestClick"))
 	inventory = $Inventory
 	pass # Replace with function body.
