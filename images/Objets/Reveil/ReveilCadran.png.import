@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ReveilCadran.png-e2a24dd9b4dfc89137a672f22068b8ec.stex"
+path="res://.import/ReveilCadran.png-aa20b5a15ff4ec66be91abaac9a3e407.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/Objets/Reveil/ReveilCadran.png"
-dest_files=[ "res://.import/ReveilCadran.png-e2a24dd9b4dfc89137a672f22068b8ec.stex" ]
+source_file="res://images/Objets/Reveil/ReveilCadran.png"
+dest_files=[ "res://.import/ReveilCadran.png-aa20b5a15ff4ec66be91abaac9a3e407.stex" ]
 
 [params]
 
