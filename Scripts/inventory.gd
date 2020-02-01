@@ -8,12 +8,14 @@ class_name Inventory
 var itemName
 var itemScene = null
 
-func addItemScene(itemNameToSet):
-	itemName = itemNameToSet
-	
+func addItemScene():
 	var itemSceneSource = load("res://Scenes/"+itemName+".tscn")
-	print(itemScene)
+	print("res://Scenes/"+itemName+".tscn")
 	itemScene = itemSceneSource.instance()
+	print(itemScene)
+	print(itemScene.position.x)
+	print(itemScene.position.y)
+	call_deferred("add_child",itemScene)
 
 
 
@@ -21,7 +23,7 @@ func addItemScene(itemNameToSet):
 func setItem(itemToSet):
 	itemName = itemToSet
 	print(itemName)
-	addItemScene(itemName)
+	addItemScene()
 	pass
 
 func isItemRepaired():
@@ -32,7 +34,6 @@ func hasItem():
 	return itemScene==null
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
 	pass # Replace with function body.
 
 
