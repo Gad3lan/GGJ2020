@@ -13,12 +13,14 @@ var mouseOver
 var startTime = 0
 export (NodePath) var nextMovable = null
 export (NodePath) var soundPlayer = null
+var main
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	isMoved = false
 	needLongClick = false
 	clicking = false
 	isLocked = false
+	main = get_parent().get_parent().get_parent()
 
 func _process(delta):
 	if isDragAndDrop and clicking:
@@ -44,7 +46,8 @@ func _on_Area2D_input_event(viewport, event, _shape_idx):
 					var soundNode = get_node(soundPlayer)
 					if soundNode != null:
 						var s = "Sound" + str(randi()%4 + 1)
-						soundNode.get_node(s).play()
+						if not main.isComplete():
+							soundNode.get_node(s).play()
 				set_position(pos)
 			clicking = false
 		if needLongClick:
