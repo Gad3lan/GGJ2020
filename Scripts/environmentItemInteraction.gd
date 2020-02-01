@@ -8,7 +8,7 @@ class_name EnvironmentItemInteraction
 const Zone = preload("itemZone.gd")
 const Item = preload("item.gd")
 
-const InventoryScene = preload("inventory.tscn")
+const InventoryScene = preload("res://Scenes/inventory.tscn")
 var inventory
 var posItems = {Zone.new(Vector2(0,0)):Item.new()}
 
