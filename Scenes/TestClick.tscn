@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Images/Objets/Reveil/ReveilCasse.png" type="Texture" id=1]
 [ext_resource path="res://Images/Objets/Reveil/ReveilEngrenage.png" type="Texture" id=2]
@@ -12,7 +12,6 @@
 [ext_resource path="res://Sounds/scie2.wav" type="AudioStream" id=10]
 [ext_resource path="res://Sounds/scie1.wav" type="AudioStream" id=11]
 [ext_resource path="res://Scripts/Object.gd" type="Script" id=12]
-[ext_resource path="res://Sounds/reveilPickup.wav" type="AudioStream" id=13]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 30.221
@@ -154,9 +153,6 @@ stream = ExtResource( 10 )
 
 [node name="Sound4" type="AudioStreamPlayer" parent="Object/SoundPlayer"]
 stream = ExtResource( 9 )
-
-[node name="Complete" type="AudioStreamPlayer" parent="Object/SoundPlayer"]
-stream = ExtResource( 13 )
 [connection signal="input_event" from="Object/Engrenage/Area2D" to="Object/Engrenage/Area2D" method="_on_Area2D_input_event"]
 [connection signal="input_event" from="Object/Cloche/Area2D" to="Object/Cloche/Area2D" method="_on_Area2D_input_event"]
 [connection signal="input_event" from="Object/Cadran/Area2D" to="Object/Cadran/Area2D" method="_on_Area2D_input_event"]
