@@ -9,7 +9,7 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Node",
+"base": "Reference",
 "class": "EnvironmentItemInteraction",
 "language": "GDScript",
 "path": "res://Scripts/environmentItemInteraction.gd"
@@ -40,7 +40,22 @@ _global_script_class_icons={
 
 config/name="Remind to Repair"
 run/main_scene="res://Scenes/TestClick.tscn"
+<<<<<<< HEAD
 config/icon="res://Images/tests/icon.png"
+=======
+config/icon="res://icon.png"
+<<<<<<< HEAD
+=======
+
+[input]
+
+test={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":69,"unicode":0,"echo":false,"script":null)
+ ]
+}
+>>>>>>> 124debdb95c5f2889fd9e64769bc82b756cd7291
+>>>>>>> 4286ddc44b57343333b345a98213cc58abd52f2a
 
 [rendering]
 
