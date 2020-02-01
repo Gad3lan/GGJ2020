@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ddpiiqh-95b8a717-fda9-427e-b6b5-614a13f82374.png-dcb96778db19055186fb6b2c82ff273d.stex"
+path="res://.import/ddpiiqh-95b8a717-fda9-427e-b6b5-614a13f82374.png-6e150558b418c2f9d48e7899d75990ef.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/Perso/ddpiiqh-95b8a717-fda9-427e-b6b5-614a13f82374.png"
-dest_files=[ "res://.import/ddpiiqh-95b8a717-fda9-427e-b6b5-614a13f82374.png-dcb96778db19055186fb6b2c82ff273d.stex" ]
+source_file="res://Images/Perso/ddpiiqh-95b8a717-fda9-427e-b6b5-614a13f82374.png"
+dest_files=[ "res://.import/ddpiiqh-95b8a717-fda9-427e-b6b5-614a13f82374.png-6e150558b418c2f9d48e7899d75990ef.stex" ]
 
 [params]
 
