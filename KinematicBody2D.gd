@@ -9,7 +9,6 @@ var screen_size
 func _ready():
 	screen_size = get_viewport_rect().size
 
-
 func _physics_process(delta):
 	
 # Move the body	
@@ -19,13 +18,6 @@ func _physics_process(delta):
 		velocity.x = -speed
 	else:
 		velocity.x = 0
-	
-	if Input.is_action_pressed('ui_up'):
-		velocity.y = -speed
-	elif Input.is_action_pressed('ui_down'):
-		velocity.y = speed
-	else:
-		velocity.y = 0
 		
 # Animate the movement		
 	if velocity.length() > 0:
@@ -45,3 +37,11 @@ func _physics_process(delta):
 	
 	position.x = clamp(position.x, 0, screen_size.x)
 	position.y = clamp(position.y, 0, screen_size.y)
+	
+
+
+
+func _on_KinematicBody2D_input_event(viewport, event, shape_idx):
+	$AnimatedSprite.stop()
+	velocity.x = 0
+	velocity.y = 0
