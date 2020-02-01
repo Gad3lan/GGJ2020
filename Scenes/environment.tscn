@@ -1,16 +1,15 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/character.tscn" type="PackedScene" id=1]
 [ext_resource path="res://images/plan global.png" type="Texture" id=2]
 
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 5786.07, 116.112 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 130.413, 791.468 )
+
 [node name="Node2D" type="Node2D"]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-
-[node name="Polygon2D" type="Polygon2D" parent="CollisionPolygon2D"]
-color = Color( 0, 0, 0, 1 )
-invert_enable = true
-polygon = PoolVector2Array( -5717.15, -719.517, 5726.91, -689.348, 5736.97, 245.887, -5717.15, 286.112 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -23,10 +22,34 @@ position = Vector2( 12.647, -217.514 )
 texture = ExtResource( 2 )
 
 [node name="Node2D" parent="." instance=ExtResource( 1 )]
-position = Vector2( -618.549, -29.3583 )
-SPEED = 10
+position = Vector2( -612.549, -29.3583 )
+SPEED = 800
 
 [node name="Camera2D2" type="Camera2D" parent="Node2D"]
 position = Vector2( 1.46216, -165.571 )
 current = true
 zoom = Vector2( 2, 1.6 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 19.1069, 439.46 )
+shape = SubResource( 1 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2( 19.1069, -869.366 )
+shape = SubResource( 1 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2( -5884.94, -219.73 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+position = Vector2( 5932.71, -219.73 )
+shape = SubResource( 2 )

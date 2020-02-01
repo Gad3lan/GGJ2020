@@ -11,10 +11,10 @@ func _ready():
 
 func moveLeft():
 	$AnimatedSprite.flip_h = true
-	velocity.x -= SPEED
+	velocity.x = -SPEED
 func moveRight():
 	$AnimatedSprite.flip_h = false
-	velocity.x += SPEED
+	velocity.x = +SPEED
 func idle():
 	velocity.x = 0
 	
