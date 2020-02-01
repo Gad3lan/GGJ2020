@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/bottesSteps.wav-6fd3c24df3989af1f053e8f37eda6d38.sample"
+path="res://.import/bottesSteps.wav-826c834e9e02b6f98ab8f556740984a8.sample"
 
 [deps]
 
-source_file="res://Sounds/bottesSteps.wav"
-dest_files=[ "res://.import/bottesSteps.wav-6fd3c24df3989af1f053e8f37eda6d38.sample" ]
+source_file="res://sounds/bottesSteps.wav"
+dest_files=[ "res://.import/bottesSteps.wav-826c834e9e02b6f98ab8f556740984a8.sample" ]
 
 [params]
 
