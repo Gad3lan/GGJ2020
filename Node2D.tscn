@@ -1,0 +1,59 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://playerGrey_walk1.png" type="Texture" id=1]
+[ext_resource path="res://clouds_MG_2.png" type="Texture" id=2]
+[ext_resource path="res://playerGrey_walk2.png" type="Texture" id=3]
+[ext_resource path="res://KinematicBody2D.gd" type="Script" id=4]
+[ext_resource path="res://mountains_lightened.png" type="Texture" id=6]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "right",
+"speed": 5.0
+} ]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( -132.135, 17.618 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+layer = -1
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1355, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 0.978134, -2.93638 )
+scale = Vector2( 3.52851, 3.52851 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.9, 1 )
+motion_mirroring = Vector2( 1355, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 0.978256, -9.91821e-05 )
+scale = Vector2( 3.52851, 3.52851 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+position = Vector2( 264.27, 428.704 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="KinematicBody2D"]
+position = Vector2( -8.70563, 4.52386 )
+frames = SubResource( 1 )
+animation = "right"
+
+[node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
+position = Vector2( -2.18811, 9.2229 )
+current = true
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+editor_draw_screen = false
