@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
-const SPEED = 400
-const G = 1200
+export var SPEED = 20
+export var G = 120
 
 var screen_size
 var velocity = Vector2()
@@ -11,21 +11,29 @@ func _ready():
 
 func moveLeft():
 	$AnimatedSprite.flip_h = true
-	velocity.x += SPEED
+	velocity.x = -SPEED
 func moveRight():
-	velocity.x -= SPEED
+	$AnimatedSprite.flip_h = false
+	velocity.x = +SPEED
 func idle():
 	velocity.x = 0
 	
 func  _process(delta):
-	$AnimatedSprite.flip_h = false
+	if velocity.length() > 0:
+		$AnimatedSprite.animation = "walk"
+		$AnimatedSprite.play()
+	else:
+		$AnimatedSprite.animation = "idle"
+		$AnimatedSprite.stop()
+		
 	if Input.is_action_pressed("ui_left"):
 		moveLeft()
 	elif Input.is_action_pressed("ui_right"):
 		moveRight()
 	else:
 		idle()
-	if velocity.length() > 0:
-		$AnimatedSprite.play()
-	else:
-		$AnimatedSprite.stop()
+		
+	position += velocity * delta
+
+func _move_and_collide():
+	idle()
