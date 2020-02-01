@@ -12,22 +12,22 @@ _global_script_classes=[ {
 "base": "Node",
 "class": "EnvironmentItemInteraction",
 "language": "GDScript",
-"path": "res://environmentItemInteraction.gd"
+"path": "res://Scripts/environmentItemInteraction.gd"
 }, {
 "base": "Node2D",
 "class": "Inventory",
 "language": "GDScript",
-"path": "res://inventory.gd"
+"path": "res://Scripts/inventory.gd"
 }, {
 "base": "Node",
 "class": "Item",
 "language": "GDScript",
-"path": "res://item.gd"
+"path": "res://Scripts/item.gd"
 }, {
 "base": "Node",
 "class": "Zone",
 "language": "GDScript",
-"path": "res://itemZone.gd"
+"path": "res://Scripts/itemZone.gd"
 } ]
 _global_script_class_icons={
 "EnvironmentItemInteraction": "",
@@ -39,8 +39,8 @@ _global_script_class_icons={
 [application]
 
 config/name="Remind to Repair"
-run/main_scene="res://inventory.tscn"
-config/icon="res://icon.png"
+run/main_scene="res://Scenes/TestClick.tscn"
+config/icon="res://Images/tests/icon.png"
 
 [rendering]
 
