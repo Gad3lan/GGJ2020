@@ -1,6 +1,15 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://images/plan global.png" type="Texture" id=1]
+[ext_resource path="res://images/décor/Fond complet.png" type="Texture" id=1]
+[ext_resource path="res://images/décor/transition toilettes-chambre.png" type="Texture" id=2]
+[ext_resource path="res://images/décor/Transition entrée-salon.png" type="Texture" id=3]
+[ext_resource path="res://images/décor/transition salon-cuisine.png" type="Texture" id=4]
+[ext_resource path="res://images/décor/transition chambre-salle de bain.png" type="Texture" id=5]
+[ext_resource path="res://images/décor/transition cuisine-toilettes.png" type="Texture" id=6]
+[ext_resource path="res://images/décor/canapé salon.png" type="Texture" id=7]
+[ext_resource path="res://images/décor/tiroire cuisine.png" type="Texture" id=8]
+[ext_resource path="res://images/décor/WC toilettes.png" type="Texture" id=9]
+[ext_resource path="res://images/décor/table de chevet chambre.png" type="Texture" id=10]
 
 [sub_resource type="PhysicsMaterial" id=1]
 
@@ -10,23 +19,50 @@ extents = Vector2( 5786.07, 116.112 )
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 130.413, 772.362 )
 
-[sub_resource type="PhysicsMaterial" id=4]
-
-[sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 319.793, 133.996 )
+[sub_resource type="CapsuleShape2D" id=4]
+radius = 165.752
+height = -69.7967
 
 [node name="Node2D2" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-modulate = Color( 0.215686, 0.439216, 0.239216, 1 )
 margin_left = -5754.78
-margin_top = -770.697
+margin_top = -769.265
 margin_right = 5765.22
-margin_bottom = 309.303
+margin_bottom = 310.735
 texture = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="transition salon-cuisine" type="Sprite" parent="."]
+position = Vector2( -952.272, -230.325 )
+z_index = 1
+texture = ExtResource( 4 )
+
+[node name="transition toilettes-chambre" type="Sprite" parent="."]
+position = Vector2( 3262.15, -231.08 )
+z_index = 1
+z_as_relative = false
+texture = ExtResource( 2 )
+
+[node name="transition chambre-salle de bain" type="Sprite" parent="."]
+position = Vector2( 4451.25, -236.403 )
+z_index = 1
+z_as_relative = false
+texture = ExtResource( 5 )
+
+[node name="transition cuisine-toilettes" type="Sprite" parent="."]
+position = Vector2( 1915.92, -228.82 )
+z_index = 1
+z_as_relative = false
+texture = ExtResource( 6 )
+
+[node name="Transition entrée-salon" type="Sprite" parent="."]
+position = Vector2( -3855.43, -225.245 )
+z_index = 1
+z_as_relative = false
+texture = ExtResource( 3 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 physics_material_override = SubResource( 1 )
@@ -44,18 +80,96 @@ shape = SubResource( 2 )
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
-position = Vector2( -5884.94, -219.73 )
+position = Vector2( -5728.73, -216.941 )
 shape = SubResource( 3 )
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
-position = Vector2( 5854.24, -229.538 )
+position = Vector2( 5798.24, -219.468 )
 shape = SubResource( 3 )
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="."]
-position = Vector2( 5.30017, 210.588 )
-physics_material_override = SubResource( 4 )
+position = Vector2( -3292.97, 70.8165 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D5"]
+position = Vector2( 9.40576, 7.76159 )
+scale = Vector2( 0.743458, 0.743458 )
+texture = ExtResource( 7 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5"]
-shape = SubResource( 5 )
+shape = SubResource( 4 )
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="."]
+position = Vector2( 88.9511, 214.828 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D6"]
+position = Vector2( 9.40576, 7.76159 )
+scale = Vector2( 0.743458, 0.743458 )
+texture = ExtResource( 8 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D6"]
+polygon = PoolVector2Array( -28.8813, -36.3434, 124.34, -36.3434, 130.068, 19.5035, 88.5404, 48.143, -83.2963, 53.8708, -81.8643, 3.7518 )
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="."]
+position = Vector2( 2487.22, -119.587 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D7"]
+position = Vector2( 9.40576, 7.76159 )
+scale = Vector2( 0.743458, 0.743458 )
+texture = ExtResource( 9 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D7"]
+polygon = PoolVector2Array( -154.094, 158.25, -105.86, 156.743, -66.6689, 186.889, -62.147, 226.08, -66.6689, 268.286, -93.8008, 310.491, -105.86, 331.594, -104.352, 367.77, -120.933, 385.858, -146.558, 388.873, -163.139, 381.336, -172.183, 373.8, -173.69, 343.653, -191.778, 319.535, -209.866, 298.433, -221.925, 272.808, -227.954, 242.661, -229.461, 214.022, -218.91, 195.933, -202.329, 171.816, -176.705, 159.757 )
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="."]
+position = Vector2( 3923.97, 39.0458 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D8"]
+position = Vector2( 9.40576, 7.76159 )
+scale = Vector2( 0.743458, 0.743458 )
+texture = ExtResource( 10 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D8"]
+polygon = PoolVector2Array( -21.7971, 45.4864, 101.796, 48.8268, 95.1157, 207.494, 101.796, 235.887, 73.4033, 260.94, -70.2324, 262.61, -73.5728, 73.8795 )
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D9"]
+polygon = PoolVector2Array( -3832.85, -760.747, -3835.37, -493.889, -3737.18, -463.679, -3686.83, -498.924, -3674.24, -763.265 )
+
+[node name="StaticBody2D10" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D10"]
+position = Vector2( 2910.27, -15.1052 )
+polygon = PoolVector2Array( -3832.85, -760.747, -3835.37, -493.889, -3737.18, -463.679, -3686.83, -498.924, -3674.24, -763.265 )
+
+[node name="StaticBody2D11" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D11"]
+position = Vector2( 5775.22, -5.03503 )
+polygon = PoolVector2Array( -3832.85, -760.747, -3835.37, -493.889, -3717.04, -453.608, -3686.83, -498.924, -3674.24, -763.265 )
+
+[node name="StaticBody2D12" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D12"]
+position = Vector2( 7106.99, -5.03503 )
+polygon = PoolVector2Array( -3832.85, -760.747, -3835.37, -493.889, -3704.45, -456.126, -3686.83, -498.924, -3674.24, -763.265 )
+
+[node name="StaticBody2D13" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D13"]
+position = Vector2( 8287.72, -5.03503 )
+polygon = PoolVector2Array( -3832.85, -760.747, -3825.3, -486.336, -3699.42, -458.643, -3664.17, -496.406, -3674.24, -763.265 )

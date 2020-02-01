@@ -7,20 +7,20 @@
 [ext_resource path="res://images/Fantome/fantome2.png" type="Texture" id=5]
 [ext_resource path="res://images/Fantome/fantome3.png" type="Texture" id=6]
 
-[sub_resource type="ShaderMaterial" id=4]
+[sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 1 )
 shader_param/offset = Vector2( 8, 8 )
 shader_param/modulate = null
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 164.142, 174.163 )
 
-[sub_resource type="ShaderMaterial" id=5]
+[sub_resource type="ShaderMaterial" id=3]
 shader = ExtResource( 1 )
 shader_param/offset = Vector2( 8, 8 )
 shader_param/modulate = null
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=4]
 animations = [ {
 "frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
 "loop": true,
@@ -29,22 +29,22 @@ animations = [ {
 } ]
 
 [node name="Node2D" type="KinematicBody2D"]
-material = SubResource( 4 )
+material = SubResource( 1 )
 script = ExtResource( 2 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 position = Vector2( -7.25415, -145.083 )
 stream = ExtResource( 3 )
 autoplay = true
-attenuation = 12.1257
+attenuation = 2.37841
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-material = SubResource( 5 )
+material = SubResource( 3 )
 position = Vector2( -300.702, 310.402 )
-frames = SubResource( 2 )
+frames = SubResource( 4 )
 frame = 2
 playing = true
 flip_h = true
