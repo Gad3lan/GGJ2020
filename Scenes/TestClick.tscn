@@ -132,7 +132,7 @@ shape = SubResource( 5 )
 position = Vector2( -483.582, 102.509 )
 
 [node name="Area2D" type="Area2D" parent="Object/Grande Aiguille"]
-position = Vector2( 650.871, 277.403 )
+position = Vector2( 651.374, 277.907 )
 z_index = 1
 script = ExtResource( 4 )
 dest = Vector2( 989, 156 )
