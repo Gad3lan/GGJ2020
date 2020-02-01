@@ -1,42 +1,19 @@
-<<<<<<< HEAD
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scenes/character.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Decor.tscn" type="PackedScene" id=2]
-=======
-[gd_scene load_steps=5 format=2]
-
-[ext_resource path="res://Scenes/Decor.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scenes/fantome.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scenes/character.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/inventory.tscn" type="PackedScene" id=4]
->>>>>>> dc6c2ed084d293f020dcfbf3ea616cb54d61df4c
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Node2D2" parent="." instance=ExtResource( 2 )]
 
-<<<<<<< HEAD
 [node name="Node2D" parent="." instance=ExtResource( 1 )]
-=======
-[node name="Node2D3" parent="." instance=ExtResource( 2 )]
-
-[node name="player" parent="." instance=ExtResource( 3 )]
->>>>>>> dc6c2ed084d293f020dcfbf3ea616cb54d61df4c
-position = Vector2( -682.287, -26.5688 )
+position = Vector2( -689.287, -34.5688 )
 SPEED = 800
 JUMP = 800
 G = 20
 
-<<<<<<< HEAD
 [node name="Camera2D2" type="Camera2D" parent="Node2D"]
 position = Vector2( 1.46216, -165.571 )
-=======
-[node name="Camera2D2" type="Camera2D" parent="player"]
-position = Vector2( 1.46216, -458.255 )
->>>>>>> dc6c2ed084d293f020dcfbf3ea616cb54d61df4c
 current = true
 zoom = Vector2( 2, 1.6 )
-
-[node name="inventory" parent="player/Camera2D2" instance=ExtResource( 4 )]
-position = Vector2( -89.7034, -891.756 )
