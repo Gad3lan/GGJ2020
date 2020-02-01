@@ -11,7 +11,8 @@ var needLongClick
 var isDragAndDrop = true
 var mouseOver
 var startTime = 0
-
+export (NodePath) var nextMovable = null
+export (NodePath) var soundPlayer = null
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	isMoved = false
@@ -36,7 +37,15 @@ func _on_Area2D_input_event(viewport, event, _shape_idx):
 			if pos.x >= dest.x - tolerance and pos.x <= dest.x + tolerance and pos.y >= dest.y - tolerance and pos.y <= dest.y + tolerance:
 				print("Adjusted")
 				pos = dest
-				isLocked = true
+				var isNextMovableLocked = true
+				if nextMovable != null:
+					isNextMovableLocked = get_node(nextMovable).get("isLocked")
+				if isNextMovableLocked:
+					isLocked = true
+					var soundNode = get_node(soundPlayer)
+					if soundNode != null:
+						var s = "Sound" + str(randi()%4 + 1)
+						soundNode.get_node(s).play()
 				set_position(pos)
 			clicking = false
 		if needLongClick:
