@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/scie2.wav-1c39365f60f3b35c99eaeaf5671ffc1c.sample"
+path="res://.import/scie2.wav-ec4ddbf15d6e288def2bae266e0aba95.sample"
 
 [deps]
 
-source_file="res://sounds/scie2.wav"
-dest_files=[ "res://.import/scie2.wav-1c39365f60f3b35c99eaeaf5671ffc1c.sample" ]
+source_file="res://Sounds/scie2.wav"
+dest_files=[ "res://.import/scie2.wav-ec4ddbf15d6e288def2bae266e0aba95.sample" ]
 
 [params]
 

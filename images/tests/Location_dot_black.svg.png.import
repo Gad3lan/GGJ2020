@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Location_dot_black.svg.png-f204c6393a54b38f59518c7832a5aa48.stex"
+path="res://.import/Location_dot_black.svg.png-170bbaf4bad8717f162d1e06214ce5f6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/tests/Location_dot_black.svg.png"
-dest_files=[ "res://.import/Location_dot_black.svg.png-f204c6393a54b38f59518c7832a5aa48.stex" ]
+source_file="res://Images/tests/Location_dot_black.svg.png"
+dest_files=[ "res://.import/Location_dot_black.svg.png-170bbaf4bad8717f162d1e06214ce5f6.stex" ]
 
 [params]
 
