@@ -35,7 +35,6 @@ func _on_Area2D_input_event(viewport, event, _shape_idx):
 			posOffset = self.position - get_viewport().get_mouse_position()
 		else:
 			if pos.x >= dest.x - tolerance and pos.x <= dest.x + tolerance and pos.y >= dest.y - tolerance and pos.y <= dest.y + tolerance:
-				print("Adjusted")
 				pos = dest
 				var isNextMovableLocked = true
 				if nextMovable != null:
