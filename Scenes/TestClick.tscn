@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Images/Objets/Reveil/ReveilCasse.png" type="Texture" id=1]
 [ext_resource path="res://Images/Objets/Reveil/ReveilEngrenage.png" type="Texture" id=2]
@@ -12,22 +12,21 @@
 [ext_resource path="res://Sounds/scie2.wav" type="AudioStream" id=10]
 [ext_resource path="res://Sounds/scie1.wav" type="AudioStream" id=11]
 [ext_resource path="res://Scripts/Object.gd" type="Script" id=12]
-[ext_resource path="res://Sounds/reveilPickup.wav" type="AudioStream" id=13]
 
-[sub_resource type="CircleShape2D" id=2]
+[sub_resource type="CircleShape2D" id=1]
 radius = 30.221
 
-[sub_resource type="CapsuleShape2D" id=3]
+[sub_resource type="CapsuleShape2D" id=2]
 radius = 49.7109
 height = 39.5164
 
-[sub_resource type="CircleShape2D" id=4]
+[sub_resource type="CircleShape2D" id=3]
 radius = 139.066
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 4.9838, 28.3421 )
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 7.5451, 56.7794 )
 
 [node name="Node2D" type="Node2D"]
@@ -38,7 +37,7 @@ script = ExtResource( 12 )
 [node name="Engrenage" type="Node2D" parent="Object"]
 
 [node name="Area2D" type="Area2D" parent="Object/Engrenage"]
-position = Vector2( 850.69, 92.8825 )
+position = Vector2( 141.318, 537.334 )
 z_index = 1
 script = ExtResource( 4 )
 dest = Vector2( 482, 315 )
@@ -51,7 +50,7 @@ texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Object/Engrenage/Area2D"]
 position = Vector2( 1, -2 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="Cloche" type="Node2D" parent="Object"]
 position = Vector2( -483.582, 102.509 )
@@ -71,7 +70,7 @@ texture = ExtResource( 3 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Object/Cloche/Area2D"]
 position = Vector2( -7.72443, -2 )
 rotation = 0.657989
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 
 [node name="Cadran" type="Node2D" parent="Object"]
 position = Vector2( -483.582, 102.509 )
@@ -91,7 +90,7 @@ texture = ExtResource( 7 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Object/Cadran/Area2D"]
 position = Vector2( -1.90508, 0.586403 )
-shape = SubResource( 4 )
+shape = SubResource( 3 )
 
 [node name="Petite aiguille" type="Node2D" parent="Object"]
 position = Vector2( -483.582, 102.509 )
@@ -113,7 +112,7 @@ texture = ExtResource( 6 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Object/Petite aiguille/Area2D"]
 position = Vector2( -1.90508, -1.4071 )
 rotation = 0.392699
-shape = SubResource( 5 )
+shape = SubResource( 4 )
 
 [node name="Grande Aiguille" type="Node2D" parent="Object"]
 position = Vector2( -492.148, 93.4401 )
@@ -134,7 +133,7 @@ texture = ExtResource( 5 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Object/Grande Aiguille/Area2D"]
 position = Vector2( -4.59737, -8.54724 )
 rotation = 0.246091
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 
 [node name="Sprite" type="Sprite" parent="Object"]
 position = Vector2( 505.722, 273.123 )
@@ -154,9 +153,6 @@ stream = ExtResource( 10 )
 
 [node name="Sound4" type="AudioStreamPlayer" parent="Object/SoundPlayer"]
 stream = ExtResource( 9 )
-
-[node name="Complete" type="AudioStreamPlayer" parent="Object/SoundPlayer"]
-stream = ExtResource( 13 )
 [connection signal="input_event" from="Object/Engrenage/Area2D" to="Object/Engrenage/Area2D" method="_on_Area2D_input_event"]
 [connection signal="input_event" from="Object/Cloche/Area2D" to="Object/Cloche/Area2D" method="_on_Area2D_input_event"]
 [connection signal="input_event" from="Object/Cadran/Area2D" to="Object/Cadran/Area2D" method="_on_Area2D_input_event"]
