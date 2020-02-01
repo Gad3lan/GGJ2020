@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/fantom.wav-431e05cdf32f81e266a5c180e95f3eab.sample"
+path="res://.import/fantom.wav-421c9b5f7e1e211891f96a5db5079c6d.sample"
 
 [deps]
 
-source_file="res://sounds/fantom.wav"
-dest_files=[ "res://.import/fantom.wav-431e05cdf32f81e266a5c180e95f3eab.sample" ]
+source_file="res://Sounds/fantom.wav"
+dest_files=[ "res://.import/fantom.wav-421c9b5f7e1e211891f96a5db5079c6d.sample" ]
 
 [params]
 
