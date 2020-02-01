@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ddpjkqk-e17cd6e2-63d1-4370-bdf9-3fb420b7f15b.png-7424ab9d1c9efb5ee90264b9434db3c6.stex"
+path="res://.import/morceau1.png-0e7e4f56242131da3e2d2087984baf7a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/Objets/Theiere/ddpjkqk-e17cd6e2-63d1-4370-bdf9-3fb420b7f15b.png"
-dest_files=[ "res://.import/ddpjkqk-e17cd6e2-63d1-4370-bdf9-3fb420b7f15b.png-7424ab9d1c9efb5ee90264b9434db3c6.stex" ]
+source_file="res://images/tests/morceau1.png"
+dest_files=[ "res://.import/morceau1.png-0e7e4f56242131da3e2d2087984baf7a.stex" ]
 
 [params]
 
