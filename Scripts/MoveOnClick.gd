@@ -20,6 +20,7 @@ func placed(nodeIn):
 		nodePlacedIn = null
 
 func anotherNodeIsDragged(zTop, unUsed):
+	print("Test")
 	lastNodeDragged = false
 	if self == zTop and not nodeDragged:
 		if not nodePlacedIn:

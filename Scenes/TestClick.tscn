@@ -34,6 +34,3 @@ position = Vector2( 600, 300 )
 scale = Vector2( 0.140462, 0.140462 )
 z_index = -1
 texture = ExtResource( 1 )
-[connection signal="input_event" from="Object/Node2D/Area2D" to="Object/Node2D/Area2D" method="_on_Area2D_input_event"]
-[connection signal="mouse_entered" from="Object/Node2D/Area2D" to="Object/Node2D/Area2D" method="_on_Area2D_mouse_entered"]
-[connection signal="mouse_exited" from="Object/Node2D/Area2D" to="Object/Node2D/Area2D" method="_on_Area2D_mouse_exited"]
