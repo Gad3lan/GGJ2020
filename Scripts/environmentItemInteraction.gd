@@ -6,11 +6,11 @@ extends Node2D
 # var b = "text"
 class_name EnvironmentItemInteraction
 const Zone = preload("itemZone.gd")
-const Item = preload("item.gd")
+
 
 const InventoryScene = preload("res://Scenes/inventory.tscn")
 var inventory
-var posItems = {Zone.new(Vector2(0,0)):Item.new()}
+var posItems = {Zone.new(Vector2(0,0)):""}
 
 func _unhandled_input(event):
 	if Input.is_action_pressed("pickup_item"):
@@ -38,8 +38,8 @@ func pickUpAt(pos):
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	
-	addZoneWithItem(Zone.new(Vector2(1,1)),Item.new("Reveil"))
-	inventory = $Environment.get_node("player/Camera2D2/inventory")
+	addZoneWithItem(Zone.new(Vector2(1,1)),"Reveil")
+	inventory = $Environment.get_node("cameraRig/inventory")
 	pass # Replace with function body.
 
 

@@ -2,9 +2,9 @@
 
 [ext_resource path="res://Scenes/Decor.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/fantome.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scenes/inventory.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/character.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/cameraRig.gd" type="Script" id=5]
+[ext_resource path="res://Scenes/character.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/cameraRig.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/inventory.tscn" type="PackedScene" id=5]
 
 [node name="Node2D" type="Node2D"]
 
@@ -16,10 +16,7 @@ scale = Vector2( 0.5, 0.5 )
 position = Vector2( -2728.13, 33.7944 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="inventory" parent="." instance=ExtResource( 3 )]
-position = Vector2( -1119.38, -683.897 )
-
-[node name="player" parent="." instance=ExtResource( 4 )]
+[node name="player" parent="." instance=ExtResource( 3 )]
 position = Vector2( -682.287, -26.5688 )
 scale = Vector2( 0.5, 0.5 )
 SPEED = 800
@@ -27,14 +24,17 @@ JUMP = 800
 G = 20
 
 [node name="cameraRig" type="Node2D" parent="."]
-position = Vector2( -12.4771, -272.001 )
-scale = Vector2( 2, 2 )
-script = ExtResource( 5 )
+position = Vector2( -142.598, -369.591 )
+script = ExtResource( 4 )
 
 [node name="Camera2D" type="Camera2D" parent="cameraRig"]
+position = Vector2( -427.539, -102.238 )
 anchor_mode = 0
 current = true
 limit_left = -2900
 limit_right = 2900
 drag_margin_h_enabled = false
 drag_margin_v_enabled = false
+
+[node name="inventory" parent="cameraRig" instance=ExtResource( 5 )]
+position = Vector2( -651.525, -87.0587 )

@@ -4,23 +4,24 @@ extends Node2D
 
 class_name Inventory
 
-const ItemVirtualClass = preload("item.gd")
-var itemVirtualObject
+
+var itemName
 var itemScene = null
 
-func addItemScene(itemName):
-	var itemScene = load("res://Scenes/"+itemName+".tscn")
-	itemScene = itemScene.instance()
-	call_deferred("add_child",itemScene)
+func addItemScene(itemNameToSet):
+	itemName = itemNameToSet
 	
-	
+	var itemSceneSource = load("res://Scenes/"+itemName+".tscn")
+	print(itemScene)
+	itemScene = itemSceneSource.instance()
+
+
+
 
 func setItem(itemToSet):
-	itemVirtualObject = itemToSet
-	print(itemVirtualObject._to_string())
-	addItemScene(itemVirtualObject._to_string())
-	
-	
+	itemName = itemToSet
+	print(itemName)
+	addItemScene(itemName)
 	pass
 
 func isItemRepaired():

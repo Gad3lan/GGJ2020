@@ -20,11 +20,6 @@ _global_script_classes=[ {
 "path": "res://Scripts/inventory.gd"
 }, {
 "base": "Node",
-"class": "Item",
-"language": "GDScript",
-"path": "res://Scripts/item.gd"
-}, {
-"base": "Node",
 "class": "Zone",
 "language": "GDScript",
 "path": "res://Scripts/itemZone.gd"
@@ -32,7 +27,6 @@ _global_script_classes=[ {
 _global_script_class_icons={
 "EnvironmentItemInteraction": "",
 "Inventory": "",
-"Item": "",
 "Zone": ""
 }
 
