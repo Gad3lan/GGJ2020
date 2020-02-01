@@ -1,5 +1,6 @@
 extends Area2D
 
+var origin = Vector2()
 var pos = Vector2()
 var posOffset = Vector2()
 export (Vector2) var dest = Vector2(700, 300)
@@ -21,6 +22,7 @@ func _ready():
 	clicking = false
 	isLocked = false
 	main = get_parent().get_parent().get_parent()
+	origin = get_position()
 
 func _process(delta):
 	if isDragAndDrop and clicking:
@@ -48,6 +50,8 @@ func _on_Area2D_input_event(viewport, event, _shape_idx):
 						var s = "Sound" + str(randi()%4 + 1)
 						if not main.isComplete():
 							soundNode.get_node(s).play()
+				else:
+					pos = origin
 				set_position(pos)
 			clicking = false
 		if needLongClick:
