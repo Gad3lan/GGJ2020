@@ -16,7 +16,7 @@ func moveVector(delta):
 	return speed * Vector2(speed,0)
 
 func _process(delta):
-	print(get_tree().get_node_count())
+	print(get_parent())
 	move_and_slide(moveVector(delta))
 
 func _ready():
