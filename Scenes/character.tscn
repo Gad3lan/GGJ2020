@@ -7,9 +7,9 @@
 [ext_resource path="res://images/Perso/ddpiiq1-c631173e-99ed-4732-8c26-d3eae6931200.png" type="Texture" id=5]
 [ext_resource path="res://Scenes/character.gd" type="Script" id=6]
 [ext_resource path="res://images/Perso/ombre.png" type="Texture" id=7]
-[ext_resource path="res://images/Perso/jump1_by_sawyer_nono_ddpj0lw-pre.png" type="Texture" id=8]
-[ext_resource path="res://images/Perso/jump2_by_sawyer_nono_ddpj0m6-pre.png" type="Texture" id=9]
-[ext_resource path="res://images/Perso/jump3_by_sawyer_nono_ddpj0mb-pre.png" type="Texture" id=10]
+[ext_resource path="res://images/Perso/jump1.png" type="Texture" id=8]
+[ext_resource path="res://images/Perso/jump2.png" type="Texture" id=9]
+[ext_resource path="res://images/Perso/jump3.png" type="Texture" id=10]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -24,7 +24,7 @@ animations = [ {
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 10 ) ],
-"loop": true,
+"loop": false,
 "name": "jump",
 "speed": 5.0
 } ]
