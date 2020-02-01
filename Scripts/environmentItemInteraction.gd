@@ -15,10 +15,15 @@ var posItems = {Zone.new(Vector2(0,0)):Item.new()}
 func _unhandled_input(event):
 	if Input.is_action_pressed("test"):
 		print("test")
+		print("getPlayerPos : ")
+		print(getPlayerPos())
 		pickUpAt(Vector2(1.5,1.5))
 		if event.pressed and event.scancode == KEY_ESCAPE:
 			get_tree().quit()
 
+
+func getPlayerPos():
+	return $Environment.get_child(0).transform
 
 func addZoneWithItem(zone,item):
 	posItems.keys().append(zone)

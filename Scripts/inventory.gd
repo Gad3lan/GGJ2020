@@ -16,9 +16,8 @@ func addItemScene(itemName):
 	
 
 func setItem(itemToSet):
-	print("hey")
 	itemVirtualObject = itemToSet
-	print(itemVirtualObject)
+	print(itemVirtualObject._to_string())
 	addItemScene(itemVirtualObject._to_string())
 	
 	

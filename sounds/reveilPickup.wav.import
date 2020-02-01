@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/reveilPickup.wav-e6f6ee26c2cd4c313dfd3b449aaba8da.sample"
+path="res://.import/reveilPickup.wav-75b6769ce22f0fcf856952565c85555e.sample"
 
 [deps]
 
-source_file="res://Sounds/reveilPickup.wav"
-dest_files=[ "res://.import/reveilPickup.wav-e6f6ee26c2cd4c313dfd3b449aaba8da.sample" ]
+source_file="res://sounds/reveilPickup.wav"
+dest_files=[ "res://.import/reveilPickup.wav-75b6769ce22f0fcf856952565c85555e.sample" ]
 
 [params]
 
