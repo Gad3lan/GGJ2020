@@ -6,6 +6,7 @@ export var G = 10
 
 var velocity = Vector2()
 var on_floor = false
+var hasToIdle : bool
 
 
 func moveLeft():
@@ -20,8 +21,7 @@ func moveRight():
 		velocity.x = +SPEED
 func idle():
 	$AnimatedSprite.animation = "idle"
-	print(get_parent())
-	get_parent().get_node("Node2D/AnimatedSprite").scale.y = 0.9 - (sin(OS.get_ticks_msec()/500.0)+1)/40
+	$AnimatedSprite.scale.y = 0.9 - (sin(OS.get_ticks_msec()/500.0)+1)/80
 	velocity.x = 0
 func jump():
 	if is_on_floor():
@@ -29,7 +29,6 @@ func jump():
 		$AnimatedSprite.animation = "jump"
 		velocity.y = -JUMP
 
-var hasToIdle : bool
 
 func  _process(delta):
 	hasToIdle = true
@@ -50,14 +49,12 @@ func  _process(delta):
 	
 	else:
 		if (is_on_floor()):
-			on_floor = true
 			if(hasToIdle):
 				idle()
 		else:
 			$AnimatedSprite.animation = "jump"
 			velocity.y +=G
-		
-	print(velocity.x)
+
 	move_and_slide(velocity, Vector2( 0,-1 ))
 
 
