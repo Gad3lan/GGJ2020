@@ -40,11 +40,7 @@ _global_script_class_icons={
 
 config/name="Remind to Repair"
 run/main_scene="res://Scenes/TestClick.tscn"
-<<<<<<< HEAD
 config/icon="res://Images/tests/icon.png"
-=======
-config/icon="res://icon.png"
->>>>>>> 51998147dc6e4fadc0c68077b71153467aa3ed5b
 
 [rendering]
 
