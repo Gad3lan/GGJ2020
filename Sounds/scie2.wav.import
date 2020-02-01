@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/scie2.wav-1c39365f60f3b35c99eaeaf5671ffc1c.sample"
+
+[deps]
+
+source_file="res://sounds/scie2.wav"
+dest_files=[ "res://.import/scie2.wav-1c39365f60f3b35c99eaeaf5671ffc1c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

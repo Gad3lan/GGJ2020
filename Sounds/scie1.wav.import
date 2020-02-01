@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/scie1.wav-b065068b1b19c934685941f468692c8d.sample"
+
+[deps]
+
+source_file="res://sounds/scie1.wav"
+dest_files=[ "res://.import/scie1.wav-b065068b1b19c934685941f468692c8d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
