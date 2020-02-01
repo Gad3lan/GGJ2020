@@ -22,6 +22,7 @@ func moveVector(delta):
 func _process(delta):
 	if (playerToChase == null):
 		return
+	
 	move_and_slide(moveVector(delta))
 
 func _ready():
