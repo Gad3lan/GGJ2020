@@ -17,7 +17,6 @@ position = Vector2( 539.044, 305.031 )
 z_index = 1
 script = ExtResource( 2 )
 dest = Vector2( 600, 300 )
-tolerance = 50.0
 
 [node name="Sprite" type="Sprite" parent="Node/Area2D"]
 texture = ExtResource( 1 )
@@ -37,7 +36,6 @@ texture = ExtResource( 3 )
 position = Vector2( 216.549, 289.896 )
 script = ExtResource( 2 )
 dest = Vector2( 200, 250 )
-tolerance = 50.0
 
 [node name="Sprite" type="Sprite" parent="Node2/Area2D"]
 texture = ExtResource( 1 )
