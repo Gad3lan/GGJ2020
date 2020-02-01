@@ -34,11 +34,11 @@ func  _process(delta):
 	else:
 		$AnimatedSprite.stop()
 		
-	if Input.is_action_pressed("ui_left"):
+	if Input.is_action_pressed("ui_left") and is_on_floor():
 		moveLeft()
-	elif Input.is_action_pressed("ui_right"):
+	elif Input.is_action_pressed("ui_right") and is_on_floor():
 		moveRight()
-	elif Input.is_action_pressed("ui_up"):
+	elif Input.is_action_pressed("ui_up") and is_on_floor():
 		jump()
 	else:
 		if (is_on_floor()):
