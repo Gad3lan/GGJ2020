@@ -8,7 +8,7 @@ extends KinematicBody2D
 var playerToChasePath = "player"
 export (float) var acc = 2
 var velocity = Vector2(0,0)
-export (float) var maxSpeed = 1000
+export (float) var maxSpeed = 10000
 var maxSpeedInv = 1/maxSpeed
 onready var playerToChase = get_parent().get_node("player")
 
