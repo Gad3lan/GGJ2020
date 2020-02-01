@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/morceau3.png-da44ca8ebf0e0917c0bff597df10dd0e.stex"
+path="res://.import/oeil.png-c35afbdd3f72fe32fac8e7c872e28b7d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/Objets/Theiere/morceau3.png"
-dest_files=[ "res://.import/morceau3.png-da44ca8ebf0e0917c0bff597df10dd0e.stex" ]
+source_file="res://images/Objets/Crabe/oeil.png"
+dest_files=[ "res://.import/oeil.png-c35afbdd3f72fe32fac8e7c872e28b7d.stex" ]
 
 [params]
 

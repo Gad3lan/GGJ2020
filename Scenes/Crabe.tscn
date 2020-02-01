@@ -1,12 +1,11 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=17 format=2]
 
-[ext_resource path="res://images/Objets/Theiere/base.png" type="Texture" id=1]
-[ext_resource path="res://images/Objets/Theiere/Morceau1.png" type="Texture" id=2]
-[ext_resource path="res://images/Objets/Theiere/morceau3.png" type="Texture" id=3]
+[ext_resource path="res://images/Objets/Crabe/pince.png" type="Texture" id=1]
+[ext_resource path="res://images/Objets/Crabe/antenne.png" type="Texture" id=2]
+[ext_resource path="res://images/Objets/Crabe/carapace.png" type="Texture" id=3]
 [ext_resource path="res://Scripts/MoveOnClick.gd" type="Script" id=4]
-[ext_resource path="res://images/Objets/Theiere/morceau4.png" type="Texture" id=5]
-[ext_resource path="res://images/Objets/Theiere/Morceau2.png" type="Texture" id=6]
-[ext_resource path="res://images/Objets/Theiere/morceau5.png" type="Texture" id=7]
+[ext_resource path="res://images/Objets/Crabe/oeil.png" type="Texture" id=5]
+[ext_resource path="res://images/Objets/Crabe/corps.png" type="Texture" id=6]
 [ext_resource path="res://Sounds/scie.wav" type="AudioStream" id=8]
 [ext_resource path="res://Sounds/scie3.wav" type="AudioStream" id=9]
 [ext_resource path="res://Sounds/scie2.wav" type="AudioStream" id=10]
@@ -15,21 +14,20 @@
 [ext_resource path="res://Sounds/reveilPickup.wav" type="AudioStream" id=13]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 49.8904
-height = 30.6422
+radius = 57.5279
+height = 58.0013
 
 [sub_resource type="CapsuleShape2D" id=2]
-radius = 49.7109
-height = 67.2858
+radius = 15.8864
+height = 1.3421
 
 [sub_resource type="CapsuleShape2D" id=3]
-radius = 16.9054
-height = 41.2884
+radius = 30.6948
+height = 54.2678
 
 [sub_resource type="CapsuleShape2D" id=4]
-radius = 14.4467
-
-[sub_resource type="CapsuleShape2D" id=5]
+radius = 13.8963
+height = 39.3917
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 12 )
@@ -39,36 +37,36 @@ script = ExtResource( 12 )
 [node name="Morceau1" type="Node2D" parent="Object"]
 
 [node name="Area2D" type="Area2D" parent="Object/Morceau1"]
-position = Vector2( 792.182, 86.3254 )
+position = Vector2( 258.523, 103.777 )
 z_index = 2
 script = ExtResource( 4 )
-dest = Vector2( 528, 112 )
+dest = Vector2( 548, 181 )
 tolerance = 20.0
 nextMovable = NodePath("../../Morceau2/Area2D")
 soundPlayer = NodePath("../../SoundPlayer")
 
 [node name="Sprite" type="Sprite" parent="Object/Morceau1/Area2D"]
 scale = Vector2( 0.275, 0.275 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Object/Morceau1/Area2D"]
-position = Vector2( -3.49896, 2.07944 )
-rotation = -0.392699
+position = Vector2( -8.20453, -0.273361 )
+rotation = -1.76627
 shape = SubResource( 1 )
 
 [node name="Morceau2" type="Node2D" parent="Object"]
 
 [node name="Area2D" type="Area2D" parent="Object/Morceau2"]
-position = Vector2( 684.854, 196.301 )
+position = Vector2( 692.106, 95.1717 )
 z_index = 1
 script = ExtResource( 4 )
-dest = Vector2( 481, 161 )
+dest = Vector2( 441, 209 )
 tolerance = 20.0
 soundPlayer = NodePath("../../SoundPlayer")
 
 [node name="Sprite" type="Sprite" parent="Object/Morceau2/Area2D"]
 scale = Vector2( 0.275, 0.275 )
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Object/Morceau2/Area2D"]
 position = Vector2( -3.8147e-06, 0 )
@@ -78,29 +76,30 @@ shape = SubResource( 2 )
 [node name="Morceau3" type="Node2D" parent="Object"]
 
 [node name="Area2D" type="Area2D" parent="Object/Morceau3"]
-position = Vector2( 251.556, 86.3255 )
+position = Vector2( 812.001, 174.831 )
 z_index = 3
 script = ExtResource( 4 )
-dest = Vector2( 508, 147 )
+dest = Vector2( 561, 254 )
 tolerance = 20.0
 nextMovable = NodePath("../../Morceau1/Area2D")
 soundPlayer = NodePath("../../SoundPlayer")
 
 [node name="Sprite" type="Sprite" parent="Object/Morceau3/Area2D"]
 scale = Vector2( 0.275, 0.275 )
-texture = ExtResource( 3 )
+texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Object/Morceau3/Area2D"]
 position = Vector2( -4.88758e-06, -2.2769e-05 )
+rotation = 0.980875
 shape = SubResource( 3 )
 
 [node name="Morceau4" type="Node2D" parent="Object"]
 
 [node name="Area2D" type="Area2D" parent="Object/Morceau4"]
-position = Vector2( 300.058, 239.438 )
+position = Vector2( 218.933, 214.296 )
 z_index = 4
 script = ExtResource( 4 )
-dest = Vector2( 500, 56 )
+dest = Vector2( 504, 161 )
 tolerance = 20.0
 nextMovable = NodePath("../../Morceau3/Area2D")
 soundPlayer = NodePath("../../SoundPlayer")
@@ -108,37 +107,17 @@ soundPlayer = NodePath("../../SoundPlayer")
 [node name="Sprite" type="Sprite" parent="Object/Morceau4/Area2D"]
 position = Vector2( 3.93968, -1.82991 )
 scale = Vector2( 0.275, 0.275 )
-texture = ExtResource( 5 )
+texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Object/Morceau4/Area2D"]
-position = Vector2( 3.78952, -1.54602 )
-rotation = 1.69297
+position = Vector2( -1.44743, -1.2229 )
+rotation = 0.294961
 shape = SubResource( 4 )
 
-[node name="Morceau5" type="Node2D" parent="Object"]
-
-[node name="Area2D" type="Area2D" parent="Object/Morceau5"]
-position = Vector2( 372.598, 94.2935 )
-z_index = 4
-script = ExtResource( 4 )
-dest = Vector2( 527, 47 )
-tolerance = 20.0
-nextMovable = NodePath("../../Morceau4/Area2D")
-soundPlayer = NodePath("../../SoundPlayer")
-
-[node name="Sprite" type="Sprite" parent="Object/Morceau5/Area2D"]
-scale = Vector2( 0.275, 0.275 )
-texture = ExtResource( 7 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Object/Morceau5/Area2D"]
-position = Vector2( 1.52588e-05, 0 )
-rotation = -0.834267
-shape = SubResource( 5 )
-
 [node name="Sprite" type="Sprite" parent="Object"]
-position = Vector2( 513.369, 181.707 )
+position = Vector2( 503.605, 195.029 )
 scale = Vector2( 0.275, 0.275 )
-texture = ExtResource( 1 )
+texture = ExtResource( 6 )
 
 [node name="SoundPlayer" type="Node2D" parent="Object"]
 
@@ -160,4 +139,3 @@ stream = ExtResource( 13 )
 [connection signal="input_event" from="Object/Morceau2/Area2D" to="Object/Morceau2/Area2D" method="_on_Area2D_input_event"]
 [connection signal="input_event" from="Object/Morceau3/Area2D" to="Object/Morceau3/Area2D" method="_on_Area2D_input_event"]
 [connection signal="input_event" from="Object/Morceau4/Area2D" to="Object/Morceau4/Area2D" method="_on_Area2D_input_event"]
-[connection signal="input_event" from="Object/Morceau5/Area2D" to="Object/Morceau5/Area2D" method="_on_Area2D_input_event"]

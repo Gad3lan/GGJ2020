@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/morceau6.png-4551240c5c405fd6fd400fc2750b3b08.stex"
+path="res://.import/antenne.png-2fb7637177b5fdcdead88de93ce39c88.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/Objets/Theiere/morceau6.png"
-dest_files=[ "res://.import/morceau6.png-4551240c5c405fd6fd400fc2750b3b08.stex" ]
+source_file="res://images/Objets/Crabe/antenne.png"
+dest_files=[ "res://.import/antenne.png-2fb7637177b5fdcdead88de93ce39c88.stex" ]
 
 [params]
 

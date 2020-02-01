@@ -51,12 +51,12 @@ func  _process(delta):
 		if (is_on_floor()):
 			if(hasToIdle):
 				idle()
+				$AudioStreamPlayer.play()
+				
 		else:
 			$AnimatedSprite.animation = "jump"
 			velocity.y +=G
+			$AudioStreamPlayer.play()
 
 	move_and_slide(velocity, Vector2( 0,-1 ))
 
-
-func _move_and_collide():
-	idle()
