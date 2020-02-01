@@ -1,4 +1,4 @@
-
+extends Node2D 
 
 
 # Declare member variables here. Examples:
@@ -21,8 +21,9 @@ func _unhandled_input(event):
 		
 
 
-func getPlayerPos():
-	return $Environment.get_child(0).transform
+func getPlayerPos():	
+	print($Inventory)
+	return null
 
 func addZoneWithItem(zone,item):
 	posItems.keys().append(zone)
