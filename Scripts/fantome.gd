@@ -20,7 +20,8 @@ func moveVector(delta):
 	return velocity
 
 func _process(delta):
-	
+	if (playerToChase == null):
+		return
 	move_and_slide(moveVector(delta))
 
 func _ready():

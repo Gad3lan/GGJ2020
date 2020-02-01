@@ -9,12 +9,16 @@
 
 [sub_resource type="ShaderMaterial" id=4]
 shader = ExtResource( 1 )
+shader_param/offset = Vector2( 8, 8 )
+shader_param/modulate = null
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 164.142, 174.163 )
 
 [sub_resource type="ShaderMaterial" id=5]
 shader = ExtResource( 1 )
+shader_param/offset = Vector2( 8, 8 )
+shader_param/modulate = null
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
@@ -32,7 +36,7 @@ script = ExtResource( 2 )
 position = Vector2( -7.25415, -145.083 )
 stream = ExtResource( 3 )
 autoplay = true
-attenuation = 5.65686
+attenuation = 12.1257
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
@@ -41,6 +45,6 @@ shape = SubResource( 1 )
 material = SubResource( 5 )
 position = Vector2( -300.702, 310.402 )
 frames = SubResource( 2 )
-frame = 1
+frame = 2
 playing = true
 flip_h = true
