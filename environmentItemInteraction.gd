@@ -7,9 +7,14 @@ extends Node
 class_name EnvironmentItemInteraction
 const Zone = preload("itemZone.gd")
 const Item = preload("item.gd")
-const Inventory = preload("inventory.gd")
+
+const InventoryScene = preload("inventory.tscn")
 var inventory
 var posItems = {Zone.new(Vector2(0,0)):Item.new()}
+
+func addZoneWithItem(zone,item):
+	posItems.keys().append(zone)
+	posItems[zone] = item
 
 func pickUpAt(pos):
 	for zone in posItems.keys():
@@ -18,8 +23,9 @@ func pickUpAt(pos):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	inventory = Inventory.new()
-	pickUpAt(Vector2(0.5,0.5))
+	addZoneWithItem(Zone.new(Vector2(1,1)),Item.new("TestClick"))
+	inventory = $Inventory
+	pickUpAt(Vector2(1.5,1.5))
 	pass # Replace with function body.
 
 

@@ -4,11 +4,13 @@ class_name Item
 
 var repaired = false
 var title = "Untitled"
-func _init():
+func _init(titleToSet = "Untitled"):
+	title = titleToSet
 	pass
 
 func _to_string():
 	return title
+
 
 func isRepaired():
 	return repaired

@@ -1,28 +1,38 @@
-extends Panel
+extends Node2D
 
 
 
 class_name Inventory
 
-onready var itemList = get_node("ItemList")
+const ItemVirtualClass = preload("item.gd")
+var itemVirtualObject
+var itemScene = null
 
-const Item = preload("item.gd")
+func addItemScene(itemName):
+	var itemScene = load("res://"+itemName+".tscn")
+	itemScene = itemScene.instance()
+	call_deferred("add_child",itemScene)
+	
+	
 
-var item = null
 func setItem(itemToSet):
-	item = itemToSet
-	print(item._to_string())
+	print("hey")
+	itemVirtualObject = itemToSet
+	print(itemVirtualObject)
+	addItemScene(itemVirtualObject._to_string())
+	
+	
 	pass
 
 func isItemRepaired():
-	return item.isRepaired()
-
+	return itemScene.isRepaired()
 
 
 func hasItem():
-	return false
+	return itemScene==null
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
 	pass # Replace with function body.
 
 
