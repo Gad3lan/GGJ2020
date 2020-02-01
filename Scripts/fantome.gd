@@ -6,17 +6,22 @@ extends KinematicBody2D
 
 # Called when the node enters the scene tree for the first time.
 var playerToChasePath = "player"
-export (float) var speed = 20
-onready var playerToChase = get_tree().get_root().get_node(playerToChasePath)
+export (float) var acc = 2
+var velocity = Vector2(0,0)
+export (float) var maxSpeed = 1000
+var maxSpeedInv = 1/maxSpeed
+onready var playerToChase = get_parent().get_node("player")
 
 func playerDirection():
-	return (self.position - playerToChase.position).normalized()
+	return (playerToChase.position - self.position).normalized()
 
 func moveVector(delta):
-	return speed * Vector2(speed,0)
+	print(velocity.length())
+	velocity = (velocity + (acc*playerDirection())) *(1- velocity.length() * maxSpeedInv)
+	return velocity
 
 func _process(delta):
-	print(get_parent().get_node("character"))
+	
 	move_and_slide(moveVector(delta))
 
 func _ready():
