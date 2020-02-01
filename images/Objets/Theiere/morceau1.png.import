@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/morceau1.png-81da979d40040ca694b480cd2664ca53.stex"
+path="res://.import/Morceau1.png-12150850dfe93bc0fed33f6927e7bbb9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/Objets/Theiere/morceau1.png"
-dest_files=[ "res://.import/morceau1.png-81da979d40040ca694b480cd2664ca53.stex" ]
+source_file="res://images/Objets/Theiere/Morceau1.png"
+dest_files=[ "res://.import/Morceau1.png-12150850dfe93bc0fed33f6927e7bbb9.stex" ]
 
 [params]
 
