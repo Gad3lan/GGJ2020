@@ -11,16 +11,3 @@ margin_bottom = 400.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="ItemList" type="ItemList" parent="Panel"]
-anchor_left = 0.231
-anchor_top = 0.2
-anchor_right = 0.599
-anchor_bottom = 0.703
-margin_left = 0.408646
-margin_top = 0.054863
-margin_right = 0.40863
-margin_bottom = -0.145142
-__meta__ = {
-"_edit_use_anchors_": false
-}

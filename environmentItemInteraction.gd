@@ -23,7 +23,7 @@ func pickUpAt(pos):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	addZoneWithItem(Zone.new(Vector2(1,1)),Item.new("Guitar"))
+	addZoneWithItem(Zone.new(Vector2(1,1)),Item.new("TestClick"))
 	inventory = $Inventory
 	pickUpAt(Vector2(1.5,1.5))
 	pass # Replace with function body.

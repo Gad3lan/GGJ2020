@@ -9,7 +9,8 @@ func _init(titleToSet = "Untitled"):
 	pass
 
 func _to_string():
-	return title + " item"
+	return title
+
 
 func isRepaired():
 	return repaired
