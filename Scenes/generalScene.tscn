@@ -1,10 +1,24 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Scenes/Decor.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scenes/character.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/environmentItemInteraction.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/inventory.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/environment.tscn" type="PackedScene" id=3]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
 
+<<<<<<< HEAD
+[node name="Inventory" parent="." instance=ExtResource( 2 )]
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Environment" parent="." instance=ExtResource( 3 )]
+position = Vector2( 6.55252, 318.798 )
+scale = Vector2( 0.5, 0.5 )
+=======
+<<<<<<< HEAD
+[node name="Environment" parent="." instance=ExtResource( 2 )]
+position = Vector2( -78.7388, 436.679 )
+=======
 [node name="Node2D2" parent="." instance=ExtResource( 1 )]
 
 [node name="Node2D" parent="." instance=ExtResource( 2 )]
@@ -17,3 +31,5 @@ G = 20
 position = Vector2( 1.46216, -165.571 )
 current = true
 zoom = Vector2( 2, 1.6 )
+>>>>>>> 8c68b9ece5b5c7d7bce7a517c2614843cc57c544
+>>>>>>> 85065fe448c5ab9196d3f776424000984a6f07ee

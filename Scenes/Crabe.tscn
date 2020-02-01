@@ -37,12 +37,11 @@ script = ExtResource( 12 )
 [node name="Morceau1" type="Node2D" parent="Object"]
 
 [node name="Area2D" type="Area2D" parent="Object/Morceau1"]
-position = Vector2( 258.523, 103.777 )
-z_index = 2
+position = Vector2( 254.953, 76.7423 )
+z_index = 1
 script = ExtResource( 4 )
-dest = Vector2( 548, 181 )
+dest = Vector2( 551, 127 )
 tolerance = 20.0
-nextMovable = NodePath("../../Morceau2/Area2D")
 soundPlayer = NodePath("../../SoundPlayer")
 
 [node name="Sprite" type="Sprite" parent="Object/Morceau1/Area2D"]
@@ -57,11 +56,12 @@ shape = SubResource( 1 )
 [node name="Morceau2" type="Node2D" parent="Object"]
 
 [node name="Area2D" type="Area2D" parent="Object/Morceau2"]
-position = Vector2( 692.106, 95.1717 )
-z_index = 1
+position = Vector2( 771.427, 68.1221 )
+z_index = 2
 script = ExtResource( 4 )
-dest = Vector2( 441, 209 )
+dest = Vector2( 445, 175 )
 tolerance = 20.0
+nextMovable = NodePath("../../Morceau1/Area2D")
 soundPlayer = NodePath("../../SoundPlayer")
 
 [node name="Sprite" type="Sprite" parent="Object/Morceau2/Area2D"]
@@ -79,9 +79,8 @@ shape = SubResource( 2 )
 position = Vector2( 812.001, 174.831 )
 z_index = 3
 script = ExtResource( 4 )
-dest = Vector2( 561, 254 )
+dest = Vector2( 561, 214 )
 tolerance = 20.0
-nextMovable = NodePath("../../Morceau1/Area2D")
 soundPlayer = NodePath("../../SoundPlayer")
 
 [node name="Sprite" type="Sprite" parent="Object/Morceau3/Area2D"]
@@ -96,12 +95,12 @@ shape = SubResource( 3 )
 [node name="Morceau4" type="Node2D" parent="Object"]
 
 [node name="Area2D" type="Area2D" parent="Object/Morceau4"]
-position = Vector2( 218.933, 214.296 )
-z_index = 4
+position = Vector2( 184.68, 202.474 )
+z_index = 3
 script = ExtResource( 4 )
-dest = Vector2( 504, 161 )
+dest = Vector2( 504, 121 )
 tolerance = 20.0
-nextMovable = NodePath("../../Morceau3/Area2D")
+nextMovable = NodePath("../../Morceau1/Area2D")
 soundPlayer = NodePath("../../SoundPlayer")
 
 [node name="Sprite" type="Sprite" parent="Object/Morceau4/Area2D"]
@@ -115,7 +114,7 @@ rotation = 0.294961
 shape = SubResource( 4 )
 
 [node name="Sprite" type="Sprite" parent="Object"]
-position = Vector2( 503.605, 195.029 )
+position = Vector2( 503.605, 155.029 )
 scale = Vector2( 0.275, 0.275 )
 texture = ExtResource( 6 )
 

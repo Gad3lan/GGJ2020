@@ -26,6 +26,7 @@ height = -69.7967
 [node name="Node2D2" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color( 0.215686, 0.439216, 0.239216, 1 )
 margin_left = -5754.78
 margin_top = -769.265
 margin_right = 5765.22
