@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ombre.png-fa5049d295dfb78c4e1f7a4cc0c763d0.stex"
+path="res://.import/ombre.png-fafe10c6453d4f37fcc95889ab78eebc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/Perso/ombre.png"
-dest_files=[ "res://.import/ombre.png-fa5049d295dfb78c4e1f7a4cc0c763d0.stex" ]
+source_file="res://Images/Perso/ombre.png"
+dest_files=[ "res://.import/ombre.png-fafe10c6453d4f37fcc95889ab78eebc.stex" ]
 
 [params]
 
