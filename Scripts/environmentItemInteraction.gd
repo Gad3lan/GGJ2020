@@ -18,8 +18,7 @@ func _unhandled_input(event):
 		print("getPlayerPos : ")
 		print(getPlayerPos())
 		pickUpAt(Vector2(1.5,1.5))
-		if event.pressed and event.scancode == KEY_ESCAPE:
-			get_tree().quit()
+		
 
 
 func getPlayerPos():

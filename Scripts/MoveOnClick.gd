@@ -22,7 +22,7 @@ func _ready():
 
 func _process(delta):
 	if isDragAndDrop and clicking:
-		pos = get_viewport().get_mouse_position() + posOffset
+		pos = get_global_mouse_position() + posOffset
 		set_position(pos)
 	if !isDragAndDrop and clicking and OS.get_ticks_msec() - startTime >= 500:
 		isMoved = !isMoved
@@ -32,10 +32,9 @@ func _on_Area2D_input_event(viewport, event, _shape_idx):
 	if event is InputEventMouseButton and not isLocked:
 		if event.is_pressed() and !needLongClick:
 			clicking = true
-			posOffset = self.position - get_viewport().get_mouse_position()
+			posOffset = self.position - get_global_mouse_position()
 		else:
 			if pos.x >= dest.x - tolerance and pos.x <= dest.x + tolerance and pos.y >= dest.y - tolerance and pos.y <= dest.y + tolerance:
-				print("Adjusted")
 				pos = dest
 				var isNextMovableLocked = true
 				if nextMovable != null:
