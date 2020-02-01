@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ReveilGrandeAiguilles.png-70efca2fa91fde5fed38542e9873afce.stex"
+path="res://.import/ReveilGrandeAiguilles.png-53abe73e4e9032a662a314a943608991.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/Objets/Reveil/ReveilGrandeAiguilles.png"
-dest_files=[ "res://.import/ReveilGrandeAiguilles.png-70efca2fa91fde5fed38542e9873afce.stex" ]
+source_file="res://images/Objets/Reveil/ReveilGrandeAiguilles.png"
+dest_files=[ "res://.import/ReveilGrandeAiguilles.png-53abe73e4e9032a662a314a943608991.stex" ]
 
 [params]
 
