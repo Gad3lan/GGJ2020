@@ -14,11 +14,12 @@ script = ExtResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="cameraRig"]
 position = Vector2( -427.539, -102.238 )
+offset = Vector2( 0, -200 )
 anchor_mode = 0
 current = true
 
 [node name="inventory" parent="cameraRig" instance=ExtResource( 2 )]
-position = Vector2( -201.645, -74.6196 )
+position = Vector2( -426.316, -309.889 )
 
 [node name="decors" parent="." instance=ExtResource( 3 )]
 position = Vector2( -10.353, 191.532 )
