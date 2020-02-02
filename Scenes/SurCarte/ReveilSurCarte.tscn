@@ -1,8 +1,15 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://images/Objets/ObjetsSurCarte/réveil cassé.png" type="Texture" id=1]
+[ext_resource path="res://shaders/glowingWaves.shader" type="Shader" id=1]
+[ext_resource path="res://images/Objets/ObjetsSurCarte/réveil cassé.png" type="Texture" id=2]
+
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 1 )
+shader_param/offset = Vector2( 0.51, 0.46 )
+shader_param/circleColor = Color( 0.945098, 0.788235, 0.164706, 1 )
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Sprite" type="Sprite" parent="."]
-texture = ExtResource( 1 )
+material = SubResource( 1 )
+texture = ExtResource( 2 )
