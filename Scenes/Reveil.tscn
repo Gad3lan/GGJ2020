@@ -156,7 +156,6 @@ stream = ExtResource( 12 )
 
 [node name="Complete" type="AudioStreamPlayer" parent="Object/SoundPlayer"]
 stream = ExtResource( 13 )
-volume_db = 24.0
 [connection signal="input_event" from="Object/Engrenage/Area2D" to="Object/Engrenage/Area2D" method="_on_Area2D_input_event"]
 [connection signal="input_event" from="Object/Cloche/Area2D" to="Object/Cloche/Area2D" method="_on_Area2D_input_event"]
 [connection signal="input_event" from="Object/Cadran/Area2D" to="Object/Cadran/Area2D" method="_on_Area2D_input_event"]

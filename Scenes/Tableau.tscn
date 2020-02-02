@@ -133,7 +133,6 @@ stream = ExtResource( 11 )
 
 [node name="Complete" type="AudioStreamPlayer" parent="Object/SoundPlayer"]
 stream = ExtResource( 12 )
-volume_db = 24.0
 [connection signal="input_event" from="Object/Morceau1/Area2D" to="Object/Morceau1/Area2D" method="_on_Area2D_input_event"]
 [connection signal="input_event" from="Object/Morceau2/Area2D" to="Object/Morceau2/Area2D" method="_on_Area2D_input_event"]
 [connection signal="input_event" from="Object/Morceau3/Area2D" to="Object/Morceau3/Area2D" method="_on_Area2D_input_event"]
