@@ -32,14 +32,12 @@ position = Vector2( -10.353, 191.532 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="fantom" parent="." instance=ExtResource( 4 )]
-position = Vector2( -2769.68, 135.674 )
+position = Vector2( -2728.13, 33.7944 )
 scale = Vector2( 0.5, 0.5 )
-collision_layer = 2
-collision_mask = 2
-acc = 2.0
+acc = 0.0
 
 [node name="player" parent="." instance=ExtResource( 5 )]
-position = Vector2( -2546.94, 177.002 )
+position = Vector2( -1661.1, 140.092 )
 scale = Vector2( 0.5, 0.5 )
 SPEED = 500
 JUMP = 950

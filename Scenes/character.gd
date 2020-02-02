@@ -15,7 +15,10 @@ func moveLeft():
 	if is_on_floor():
 		$AnimatedSprite.animation = "walk"
 		$AnimatedSprite.flip_h = true
-		velocity.x = -SPEED
+		if velocity.x > -SPEED:
+			velocity.x -= SPEED * 0.08
+		elif velocity.x < -SPEED:
+			velocity.x = -SPEED
 	else:
 		print("before air control")
 		if velocity.x > -SPEED:
@@ -27,7 +30,10 @@ func moveRight():
 	if is_on_floor():
 		$AnimatedSprite.animation = "walk"
 		$AnimatedSprite.flip_h = false
-		velocity.x = +SPEED
+		if velocity.x < SPEED:
+			velocity.x += SPEED * 0.08
+		elif velocity.x > SPEED:
+			velocity.x = +SPEED
 	else:
 		if velocity.x < SPEED:
 			print("trying to air control")
@@ -70,7 +76,7 @@ func  _process(delta):
 		if(hasToIdle):
 			idle()
 			$AudioStreamPlayer.play()
-			
+	
 	else:
 		$AnimatedSprite.animation = "jump"
 		velocity.y +=G
