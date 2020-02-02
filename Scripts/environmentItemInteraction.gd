@@ -21,11 +21,7 @@ var posItems = {
 
 func _unhandled_input(event):
 	if Input.is_action_pressed("pickup_item"):
-		print("test")
-		print("getPlayerPos : ")
-		print(getPlayerPos())
 		pickUpAt(getPlayerPos())
-		print(getPlayerPos())
 
 
 func getPlayerPos():	
@@ -41,10 +37,7 @@ func removeFromScene(itemName):
 func pickUpAt(pos):
 	var indexToRemove = -1
 	for zone in posItems.keys():
-		print(zone.pos)
-		print(zone.reach)
 		if zone.contains(pos):
-			print("something")
 			if (inventory.setItem(posItems[zone])):
 				removeFromScene(posItems[zone])
 				posItems.erase(zone)
