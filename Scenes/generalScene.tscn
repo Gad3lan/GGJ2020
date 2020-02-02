@@ -1,13 +1,30 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/environmentItemInteraction.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/environment.tscn" type="PackedScene" id=2]
+[ext_resource path="res://images/FondBoucleArbres.png" type="Texture" id=3]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_vertical_guides_": [ -1605.81, -3833.56, 2154.78, -3086.55, 3286.41 ]
 }
+
+[node name="FondBoucleArbres" type="Sprite" parent="."]
+position = Vector2( -2481.39, 511.599 )
+texture = ExtResource( 3 )
+
+[node name="FondBoucleArbres2" type="Sprite" parent="."]
+position = Vector2( -215.228, 511.599 )
+texture = ExtResource( 3 )
+
+[node name="FondBoucleArbres3" type="Sprite" parent="."]
+position = Vector2( 2051.72, 511.599 )
+texture = ExtResource( 3 )
+
+[node name="FondBoucleArbres4" type="Sprite" parent="."]
+position = Vector2( 4318.44, 511.599 )
+texture = ExtResource( 3 )
 
 [node name="Environment" parent="." instance=ExtResource( 2 )]
 position = Vector2( -273.573, 473.903 )
