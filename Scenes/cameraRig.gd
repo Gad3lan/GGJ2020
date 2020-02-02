@@ -7,7 +7,7 @@ extends Node2D
 var player
 
 func _process(delta):
-	position.x = player.position.x + 200
+	position.x = player.position.x
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	player = get_parent().get_node("player")
