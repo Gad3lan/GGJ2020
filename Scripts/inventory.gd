@@ -18,7 +18,8 @@ func addItemScene():
 		print(itemScene.position)
 		itemScene.scale *= 0.35
 		itemCount +=1
-	$pickUpSound.play()
+	var soundName = itemName + "Sound"
+	get_node(soundName).play()
 	var itemSceneSource = load("res://Scenes/"+itemName+".tscn")
 	itemScene = itemSceneSource.instance()
 	itemScene.position = Vector2(450, 200)
