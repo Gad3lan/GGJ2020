@@ -11,9 +11,12 @@ const Zone = preload("itemZone.gd")
 const InventoryScene = preload("res://Scenes/inventory.tscn")
 var inventory
 var posItems = {
-				Zone.new(Vector2(1864,0)):"Reveil",
+				Zone.new(Vector2(-2550,0)):"Bombarde",
 				Zone.new(Vector2(-1500,0)):"Crabe",
-				Zone.new(Vector2(586,0)):"Theiere"
+				Zone.new(Vector2(586,0)):"Theiere",
+				Zone.new(Vector2(1090,0)):"Tableau",
+				Zone.new(Vector2(1864,0)):"Reveil",
+				Zone.new(Vector2(2150,0)):"Miroir"
 				}
 
 func _unhandled_input(event):

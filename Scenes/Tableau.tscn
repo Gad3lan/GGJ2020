@@ -61,7 +61,6 @@ z_index = 2
 script = ExtResource( 2 )
 dest = Vector2( 555, 101 )
 tolerance = 20.0
-nextMovable = NodePath("../../Morceau1/Area2D")
 soundPlayer = NodePath("../../SoundPlayer")
 
 [node name="Sprite" type="Sprite" parent="Object/Morceau2/Area2D"]
