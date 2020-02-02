@@ -30,6 +30,7 @@ func _process(delta):
 		return
 	
 	move_and_slide(moveVector(delta))
+	
 
 func _ready():
 	$AudioStreamPlayer2D.playing = true

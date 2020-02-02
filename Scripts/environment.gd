@@ -15,5 +15,9 @@ func _ready():
 #func _process(delta):
 #	pass
 func _process(delta):
-	if $fantom.get_slide_collision(0) != null :
-		print("collide")
+	pass
+
+
+func _on_player_input_event(viewport, event, shape_idx):
+	print(event)
+	pass # Replace with function body.
