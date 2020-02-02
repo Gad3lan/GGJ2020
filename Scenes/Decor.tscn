@@ -42,6 +42,9 @@ shader_param/offset = Vector2( 0.51, 0.782 )
 shader_param/circleColor = Color( 1, 1, 1, 1 )
 
 [node name="Node2D2" type="Node2D"]
+__meta__ = {
+"_edit_vertical_guides_": [ -4604.64 ]
+}
 
 [node name="TextureRect" type="TextureRect" parent="."]
 margin_left = -5754.78
