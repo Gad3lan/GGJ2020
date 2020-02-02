@@ -15,16 +15,5 @@ func _ready():
 #func _process(delta):
 #	pass
 
-
-func _on_TextureButton_pressed():
-	print("azerty")
-
-
-func _on_TextureButton2_pressed():
-	print("qwerty")
-	
-
-
-
 func _on_TextureButton3_pressed():
 	get_tree().change_scene("res://Scenes/generalScene.tscn")
