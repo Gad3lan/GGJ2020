@@ -12,7 +12,7 @@
 [ext_resource path="res://Sounds/scie2.wav" type="AudioStream" id=10]
 [ext_resource path="res://Sounds/scie1.wav" type="AudioStream" id=11]
 [ext_resource path="res://Scripts/Object.gd" type="Script" id=12]
-[ext_resource path="res://Sounds/reveilPickup.wav" type="AudioStream" id=13]
+[ext_resource path="res://Sounds/Enregistrements/theiere fin.wav" type="AudioStream" id=13]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 49.8904
@@ -154,6 +154,7 @@ stream = ExtResource( 9 )
 
 [node name="Complete" type="AudioStreamPlayer" parent="Object/SoundPlayer"]
 stream = ExtResource( 13 )
+volume_db = 24.0
 [connection signal="input_event" from="Object/Morceau1/Area2D" to="Object/Morceau1/Area2D" method="_on_Area2D_input_event"]
 [connection signal="input_event" from="Object/Morceau2/Area2D" to="Object/Morceau2/Area2D" method="_on_Area2D_input_event"]
 [connection signal="input_event" from="Object/Morceau3/Area2D" to="Object/Morceau3/Area2D" method="_on_Area2D_input_event"]

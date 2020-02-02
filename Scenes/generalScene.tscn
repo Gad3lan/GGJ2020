@@ -11,6 +11,7 @@ __meta__ = {
 }
 
 [node name="Environment" parent="." instance=ExtResource( 2 )]
+<<<<<<< HEAD
 position = Vector2( -273.573, 473.903 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -27,3 +28,6 @@ centered = false
 position = Vector2( -3812.88, 15.563 )
 texture = ExtResource( 3 )
 centered = false
+=======
+position = Vector2( -272.591, 475.131 )
+>>>>>>> 8f0fed5ff22ac5bd8a3ac9a2aea006f606aa046e

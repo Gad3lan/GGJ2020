@@ -5,32 +5,16 @@
 [ext_resource path="res://images/Menu/Titre.png" type="Texture" id=3]
 [ext_resource path="res://images/Menu/fond.png" type="Texture" id=4]
 [ext_resource path="res://images/Menu/play.png" type="Texture" id=5]
-[ext_resource path="res://Scenes/Area2D.gd" type="Script" id=6]
+[ext_resource path="res://Scripts/mainPage.gd" type="Script" id=6]
 
-[sub_resource type="CapsuleShape2D" id=1]
-radius = 84.7726
-height = 379.29
-
-[node name="Node2D" type="Node2D"]
-
-[node name="MarginContainer" type="MarginContainer" parent="."]
-margin_right = 1027.0
-margin_bottom = 618.0
-__meta__ = {
-"_edit_use_anchors_": false
+[sub_resource type="BitMap" id=1]
+data = {
+"data": PoolByteArray(  ),
+"size": Vector2( 0, 0 )
 }
 
-[node name="CenterContainer" type="CenterContainer" parent="MarginContainer"]
-margin_right = 1027.0
-margin_bottom = 618.0
-
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer"]
-margin_right = 1027.0
-margin_bottom = 618.0
-
-[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/MarginContainer"]
-margin_right = 1027.0
-margin_bottom = 618.0
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 6 )
 
 [node name="fond" type="Sprite" parent="."]
 position = Vector2( 957.079, 541.805 )
@@ -41,35 +25,36 @@ position = Vector2( 948.71, 221.011 )
 scale = Vector2( 2.44799, 2.44799 )
 texture = ExtResource( 3 )
 
-[node name="Area2D" type="Area2D" parent="."]
-script = ExtResource( 6 )
-
-[node name="TextureButton" type="TextureButton" parent="Area2D"]
-margin_right = 40.0
-margin_bottom = 40.0
-action_mode = 0
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = 356.795
+margin_top = 447.019
+margin_right = 935.795
+margin_bottom = 672.019
+texture_normal = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="azerty" type="Sprite" parent="Area2D/TextureButton"]
-position = Vector2( 605.897, 550 )
-texture = ExtResource( 2 )
+[node name="TextureButton2" type="TextureButton" parent="."]
+margin_left = 1010.92
+margin_top = 449.07
+margin_right = 1589.92
+margin_bottom = 674.07
+texture_normal = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 609.012, 551.597 )
-rotation = 1.54811
-shape = SubResource( 1 )
-
-[node name="Area2D2" type="Area2D" parent="."]
-
-[node name="qwerty" type="Sprite" parent="Area2D2"]
-position = Vector2( 1344.29, 550 )
-texture = ExtResource( 1 )
-
-[node name="Area2D3" type="Area2D" parent="."]
-
-[node name="play" type="Sprite" parent="Area2D3"]
-position = Vector2( 950, 800 )
-texture = ExtResource( 5 )
-[connection signal="input_event" from="Area2D" to="Area2D" method="_on_Area2D_input_event"]
+[node name="TextureButton3" type="TextureButton" parent="."]
+margin_left = 684.882
+margin_top = 715.64
+margin_right = 1263.88
+margin_bottom = 940.64
+texture_normal = ExtResource( 5 )
+texture_click_mask = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="TextureButton2" to="." method="_on_TextureButton2_pressed"]
+[connection signal="pressed" from="TextureButton3" to="." method="_on_TextureButton3_pressed"]

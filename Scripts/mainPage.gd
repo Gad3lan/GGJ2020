@@ -1,4 +1,4 @@
-extends Area2D
+extends Node2D
 
 
 # Declare member variables here. Examples:
@@ -10,16 +10,21 @@ extends Area2D
 func _ready():
 	pass # Replace with function body.
 
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
 
 
-func _on_Area2D_input_event(viewport, event, shape_idx):
-	if event is InputEventMouseButton:
-		if event.is_pressed():
-			print("azerty")
+func _on_TextureButton_pressed():
+	print("azerty")
 
-func _input(event):
-	if event is InputEventMouseButton:
-	   print("Mouse Click/Unclick at: ", event.position)
+
+func _on_TextureButton2_pressed():
+	print("qwerty")
+	
+
+
+
+func _on_TextureButton3_pressed():
+	get_tree().change_scene("res://Scenes/generalScene.tscn")
