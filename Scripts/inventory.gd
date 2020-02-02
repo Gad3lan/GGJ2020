@@ -18,6 +18,7 @@ func addItemScene():
 		itemScene.position.y += 70
 		itemScene.scale *= 0.75
 		itemCount +=1
+	$pickUpSound.play()
 	var itemSceneSource = load("res://Scenes/"+itemName+".tscn")
 	itemScene = itemSceneSource.instance()
 	call_deferred("add_child",itemScene)
@@ -35,7 +36,7 @@ func isItemRepaired():
 	if itemScene == null:
 		
 		return true
-	return itemScene.isComplete()
+	return itemScene.isRepaired()
 
 
 func hasItem():

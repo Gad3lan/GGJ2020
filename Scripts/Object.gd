@@ -4,6 +4,8 @@ var objectNode
 var children = []
 onready var soundPlayer = get_node("Object/SoundPlayer")
 
+var isRepaired
+
 func _ready():
 	objectNode = get_node("Object")
 	children = objectNode.get_children()
@@ -18,5 +20,9 @@ func isComplete():
 		res = res and child.get("isLocked")
 	if res:
 		soundPlayer.get_node("Complete").play()
+		isRepaired = true
 		print("Complete")
 	return res
+
+func isRepaired():
+	return isRepaired
