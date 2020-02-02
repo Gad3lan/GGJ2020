@@ -25,7 +25,6 @@ func addItemScene():
 
 
 
-
 func setItem(itemToSet):
 	itemName = itemToSet
 	return addItemScene()
@@ -33,18 +32,10 @@ func setItem(itemToSet):
 
 func isItemRepaired():
 	if itemScene == null:
-		
 		return true
 	return itemScene.isRepaired()
 
 
 func hasItem():
 	return not itemScene==null
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
