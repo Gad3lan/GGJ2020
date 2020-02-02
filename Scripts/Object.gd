@@ -3,6 +3,7 @@ extends Node2D
 var objectNode
 var children = []
 onready var soundPlayer = get_node("Object/SoundPlayer")
+export (String) var sceneName = ""
 var inventory
 var isRepaired
 
@@ -23,6 +24,8 @@ func isComplete():
 		soundPlayer.get_node("Complete").play()
 		isRepaired = true
 		print("Complete")
+		if sceneName == "Miroir":
+			get_tree().change_scene("res://Scenes/mainPage.tscn")
 	return res
 
 func isRepaired():
