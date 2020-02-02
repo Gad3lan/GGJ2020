@@ -9,7 +9,6 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="cameraRig" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( -142.598, -369.591 )
 script = ExtResource( 1 )
 
@@ -17,8 +16,6 @@ script = ExtResource( 1 )
 position = Vector2( -427.539, -102.238 )
 anchor_mode = 0
 current = true
-limit_left = -2900
-limit_right = 2900
 drag_margin_h_enabled = false
 drag_margin_v_enabled = false
 

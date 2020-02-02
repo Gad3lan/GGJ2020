@@ -10,8 +10,7 @@ var itemScene = null
 
 func addItemScene():
 	if not isItemRepaired():
-		#rajouter un son/un indicateur pour dire au joueur 
-		# qu'il ne peut pas récupérer l'objet
+		$nope.play()
 		return false
 	elif hasItem():#bouge les objets finis.
 		itemScene.position.x = -400 + 200 * itemCount
