@@ -1,28 +1,29 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/environmentItemInteraction.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/environment.tscn" type="PackedScene" id=2]
+[ext_resource path="res://images/Menu/fond.png" type="Texture" id=3]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
 __meta__ = {
-"_edit_vertical_guides_": [ -1605.81, -2567.65, 2154.78 ]
-}
-
-[node name="ColorRect" type="ColorRect" parent="."]
-margin_left = -9425.0
-margin_top = -1665.0
-margin_right = 8853.0
-margin_bottom = 3145.0
-mouse_filter = 2
-color = Color( 0, 0, 0, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
+"_edit_vertical_guides_": [ -1605.81, -3833.56, 2154.78, -3086.55, 3286.41 ]
 }
 
 [node name="Environment" parent="." instance=ExtResource( 2 )]
-<<<<<<< HEAD
 position = Vector2( -273.573, 473.903 )
-=======
-position = Vector2( -272.591, 475.131 )
->>>>>>> ea7c35ff4b6d50a6818de5f4135a305e1d86eac5
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+follow_viewport_scale = 0.0
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( -3812.88, 15.563 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( -3812.88, 15.563 )
+texture = ExtResource( 3 )
+centered = false
