@@ -4,6 +4,7 @@ export var SPEED = 20
 export var JUMP = 100
 export var G = 50
 export var jumpCoolDown = 20
+export var walkAccelerator = 0.05
 
 var velocity = Vector2()
 var on_floor = false
@@ -15,7 +16,10 @@ func moveLeft():
 	if is_on_floor():
 		$AnimatedSprite.animation = "walk"
 		$AnimatedSprite.flip_h = true
-		velocity.x = -SPEED
+		if velocity.x > -SPEED:
+			velocity.x -= SPEED * walkAccelerator
+		elif velocity.x < -SPEED:
+			velocity.x = -SPEED
 	else:
 		print("before air control")
 		if velocity.x > -SPEED:
@@ -27,7 +31,10 @@ func moveRight():
 	if is_on_floor():
 		$AnimatedSprite.animation = "walk"
 		$AnimatedSprite.flip_h = false
-		velocity.x = +SPEED
+		if velocity.x < SPEED:
+			velocity.x += SPEED * walkAccelerator
+		elif velocity.x > SPEED:
+			velocity.x = +SPEED
 	else:
 		if velocity.x < SPEED:
 			print("trying to air control")
@@ -70,7 +77,7 @@ func  _process(delta):
 		if(hasToIdle):
 			idle()
 			$AudioStreamPlayer.play()
-			
+	
 	else:
 		$AnimatedSprite.animation = "jump"
 		velocity.y +=G
