@@ -4,7 +4,7 @@ extends Node2D
 
 class_name Inventory
 
-var itemCount : int
+var itemCount : int = 0
 var itemName
 var itemScene = null
 
@@ -24,12 +24,15 @@ func addItemScene():
 	call_deferred("add_child",itemScene)
 	return true
 
-
+func itemRepairedNumber():
+	return itemCount
 
 func setItem(itemToSet):
 	itemName = itemToSet
 	return addItemScene()
 
+func hasItem():
+	return not itemScene==null
 
 func isItemRepaired():
 	if itemScene == null:
@@ -37,6 +40,4 @@ func isItemRepaired():
 	return itemScene.isRepaired()
 
 
-func hasItem():
-	return not itemScene==null
 

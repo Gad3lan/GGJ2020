@@ -7,10 +7,16 @@ extends KinematicBody2D
 # Called when the node enters the scene tree for the first time.
 var playerToChasePath = "player"
 export (float) var acc = 2
-var velocity = Vector2(0,0)
+export (float) var pullBackDistance = 600
 export (float) var maxSpeed = 10000
+
+var velocity = Vector2(0,0)
 var maxSpeedInv = 1/maxSpeed
 onready var playerToChase = get_parent().get_node("player")
+
+func pullback():
+	print("pullback")
+	position.x -= pullBackDistance
 
 func playerDirection():
 	return (playerToChase.position - self.position).normalized()

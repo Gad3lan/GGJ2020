@@ -41,7 +41,10 @@ func pickUpAt(pos):
 			if (inventory.setItem(posItems[zone])):
 				removeFromScene(posItems[zone])
 				posItems.erase(zone)
-# Called when the node enters the scene tree for the first time.
+				print(inventory.itemCount)
+				if (inventory.itemCount > 0):
+					$Environment/fantom.pullback()
+
 func _ready():
 	
 	addZoneWithItem(Zone.new(Vector2(1,1)),"Reveil")
