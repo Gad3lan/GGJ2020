@@ -3,7 +3,7 @@ extends Node2D
 var objectNode
 var children = []
 onready var soundPlayer = get_node("Object/SoundPlayer")
-
+var inventory
 var isRepaired
 
 func _ready():
@@ -19,6 +19,7 @@ func isComplete():
 	for child in children:
 		res = res and child.get("isLocked")
 	if res:
+		inventory.moveItem()
 		soundPlayer.get_node("Complete").play()
 		isRepaired = true
 		print("Complete")

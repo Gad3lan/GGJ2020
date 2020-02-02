@@ -42,11 +42,9 @@ func pickUpAt(pos):
 				removeFromScene(posItems[zone])
 				posItems.erase(zone)
 				print(inventory.itemCount)
-				if (inventory.itemCount > 0):
-					$Environment/fantom.pullback()
+
 
 func _ready():
-	
 	addZoneWithItem(Zone.new(Vector2(1,1)),"Reveil")
 	inventory = $Environment.get_node("cameraRig/inventory")
 	pass # Replace with function body.
