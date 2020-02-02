@@ -15,9 +15,6 @@ func _ready():
 #func _process(delta):
 #	pass
 
-func _on_TextureButton3_pressed():
-	get_tree().change_scene("res://Scenes/controls.tscn")
 
-
-func _on_Exit_pressed():
-	get_tree().quit()
+func _on_Timer_timeout():
+	get_tree().change_scene("res://Scenes/mainPage.tscn")
