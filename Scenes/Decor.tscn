@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://images/décor/Fond complet.png" type="Texture" id=1]
 [ext_resource path="res://images/décor/transition salon-cuisine.png" type="Texture" id=2]
@@ -11,11 +11,12 @@
 [ext_resource path="res://images/décor/WC toilettes.png" type="Texture" id=9]
 [ext_resource path="res://images/décor/table de chevet chambre.png" type="Texture" id=10]
 [ext_resource path="res://images/Objets/ObjetsSurCarte/crabe casse.png" type="Texture" id=11]
-[ext_resource path="res://Scenes/SurCarte/ReveilSurCarte.tscn" type="PackedScene" id=12]
+[ext_resource path="res://images/Objets/ObjetsSurCarte/réveil casse.png" type="Texture" id=12]
 [ext_resource path="res://images/Objets/ObjetsSurCarte/téière cassee.png" type="Texture" id=13]
 [ext_resource path="res://images/Objets/ObjetsSurCarte/miroir casse.png" type="Texture" id=14]
 [ext_resource path="res://images/Objets/ObjetsSurCarte/tableau casse.png" type="Texture" id=15]
 [ext_resource path="res://images/Objets/ObjetsSurCarte/bombarde cassee.png" type="Texture" id=16]
+[ext_resource path="res://shaders/glowingWaves.shader" type="Shader" id=17]
 
 [sub_resource type="PhysicsMaterial" id=1]
 
@@ -28,6 +29,11 @@ extents = Vector2( 130.413, 772.362 )
 [sub_resource type="CapsuleShape2D" id=4]
 radius = 165.752
 height = -69.7967
+
+[sub_resource type="ShaderMaterial" id=5]
+shader = ExtResource( 17 )
+shader_param/offset = Vector2( 0.51, 0.46 )
+shader_param/circleColor = Color( 1, 1, 1, 1 )
 
 [node name="Node2D2" type="Node2D"]
 
@@ -181,11 +187,12 @@ position = Vector2( 8287.72, -5.03503 )
 polygon = PoolVector2Array( -3832.85, -760.747, -3825.3, -486.336, -3699.42, -458.643, -3664.17, -496.406, -3674.24, -763.265 )
 
 [node name="Bombarde" type="Sprite" parent="."]
+material = SubResource( 5 )
 position = Vector2( -4631.16, -66.9788 )
 texture = ExtResource( 16 )
 
 [node name="Crabe" type="Sprite" parent="."]
-position = Vector2( -2571.53, -164.512 )
+position = Vector2( -2571.53, -149.139 )
 texture = ExtResource( 11 )
 
 [node name="Theiere" type="Sprite" parent="."]
@@ -196,9 +203,10 @@ texture = ExtResource( 13 )
 position = Vector2( 2935.3, -60.1293 )
 texture = ExtResource( 15 )
 
-[node name="Reveil" parent="." instance=ExtResource( 12 )]
-position = Vector2( 3743.62, -212.049 )
-
 [node name="Miroir" type="Sprite" parent="."]
 position = Vector2( 4882.25, 52.8888 )
 texture = ExtResource( 14 )
+
+[node name="Reveil" type="Sprite" parent="."]
+position = Vector2( 3742.06, -199.611 )
+texture = ExtResource( 12 )
