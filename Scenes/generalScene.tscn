@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scripts/environmentItemInteraction.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/environment.tscn" type="PackedScene" id=2]
-[ext_resource path="res://images/Menu/fond.png" type="Texture" id=3]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
@@ -11,23 +10,9 @@ __meta__ = {
 }
 
 [node name="Environment" parent="." instance=ExtResource( 2 )]
-<<<<<<< HEAD
 position = Vector2( -273.573, 473.903 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 follow_viewport_scale = 0.0
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-
-[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( -3812.88, 15.563 )
-texture = ExtResource( 3 )
-centered = false
-
-[node name="Sprite2" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( -3812.88, 15.563 )
-texture = ExtResource( 3 )
-centered = false
-=======
-position = Vector2( -272.591, 475.131 )
->>>>>>> 8f0fed5ff22ac5bd8a3ac9a2aea006f606aa046e
