@@ -5,7 +5,7 @@ extends Node2D
 # var b = "text"
 
 var player
-
+"../player"
 func _process(delta):
 	position.x = player.position.x + 200
 # Called when the node enters the scene tree for the first time.
