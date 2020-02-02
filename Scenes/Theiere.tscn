@@ -44,7 +44,6 @@ z_index = 2
 script = ExtResource( 4 )
 dest = Vector2( 528, 112 )
 tolerance = 20.0
-nextMovable = NodePath("../../Morceau2/Area2D")
 soundPlayer = NodePath("../../SoundPlayer")
 
 [node name="Sprite" type="Sprite" parent="Object/Morceau1/Area2D"]
@@ -83,7 +82,6 @@ z_index = 3
 script = ExtResource( 4 )
 dest = Vector2( 508, 147 )
 tolerance = 20.0
-nextMovable = NodePath("../../Morceau1/Area2D")
 soundPlayer = NodePath("../../SoundPlayer")
 
 [node name="Sprite" type="Sprite" parent="Object/Morceau3/Area2D"]
@@ -102,7 +100,7 @@ z_index = 4
 script = ExtResource( 4 )
 dest = Vector2( 500, 56 )
 tolerance = 20.0
-nextMovable = NodePath("../../Morceau3/Area2D")
+nextMovable = NodePath("../../Morceau1/Area2D")
 soundPlayer = NodePath("../../SoundPlayer")
 
 [node name="Sprite" type="Sprite" parent="Object/Morceau4/Area2D"]
@@ -123,7 +121,7 @@ z_index = 4
 script = ExtResource( 4 )
 dest = Vector2( 527, 47 )
 tolerance = 20.0
-nextMovable = NodePath("../../Morceau4/Area2D")
+nextMovable = NodePath("../../Morceau1/Area2D")
 soundPlayer = NodePath("../../SoundPlayer")
 
 [node name="Sprite" type="Sprite" parent="Object/Morceau5/Area2D"]
