@@ -16,9 +16,16 @@ script = ExtResource( 1 )
 position = Vector2( -427.539, -102.238 )
 anchor_mode = 0
 current = true
+drag_margin_h_enabled = false
+drag_margin_v_enabled = false
 
 [node name="inventory" parent="cameraRig" instance=ExtResource( 2 )]
+editor/display_folded = true
 position = Vector2( -201.645, -74.6196 )
+
+[node name="ColorRect" type="ColorRect" parent="cameraRig/inventory"]
+margin_right = 40.0
+margin_bottom = 40.0
 
 [node name="decors" parent="." instance=ExtResource( 3 )]
 position = Vector2( -10.353, 191.532 )
