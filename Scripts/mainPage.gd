@@ -17,3 +17,7 @@ func _ready():
 
 func _on_TextureButton3_pressed():
 	get_tree().change_scene("res://Scenes/generalScene.tscn")
+
+
+func _on_Exit_pressed():
+	get_tree().quit()
