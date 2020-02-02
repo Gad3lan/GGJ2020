@@ -10,31 +10,41 @@ const Zone = preload("itemZone.gd")
 
 const InventoryScene = preload("res://Scenes/inventory.tscn")
 var inventory
-var posItems = {Zone.new(Vector2(0,0)):""}
+var posItems = {
+				Zone.new(Vector2(1864,0)):"Reveil",
+				Zone.new(Vector2(-1321,0)):"Crabe",
+				Zone.new(Vector2(586,0)):"Theiere"
+				}
 
 func _unhandled_input(event):
 	if Input.is_action_pressed("pickup_item"):
 		print("test")
 		print("getPlayerPos : ")
 		print(getPlayerPos())
-		pickUpAt(Vector2(1.5,1.5))
+		pickUpAt(getPlayerPos())
+		print(getPlayerPos())
 
 
 func getPlayerPos():	
-	print($Inventory)
-	return null
+	return $Environment.get_node("player").position
 
 func addZoneWithItem(zone,item):
 	posItems.keys().append(zone)
 	posItems[zone] = item
 
+func removeFromScene(itemName):
+	$Environment.get_node("decors/"+itemName).queue_free()
+
 func pickUpAt(pos):
 	var indexToRemove = -1
 	for zone in posItems.keys():
+		print(zone.pos)
+		print(zone.reach)
 		if zone.contains(pos):
-			inventory.setItem(posItems[zone])
-			posItems.erase(zone)
-			
+			print("something")
+			if (inventory.setItem(posItems[zone])):
+				removeFromScene(posItems[zone])
+				posItems.erase(zone)
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	

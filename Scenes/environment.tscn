@@ -9,6 +9,7 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="cameraRig" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( -142.598, -369.591 )
 script = ExtResource( 1 )
 
@@ -22,6 +23,7 @@ drag_margin_h_enabled = false
 drag_margin_v_enabled = false
 
 [node name="inventory" parent="cameraRig" instance=ExtResource( 2 )]
+editor/display_folded = true
 position = Vector2( -201.645, -74.6196 )
 
 [node name="ColorRect" type="ColorRect" parent="cameraRig/inventory"]
@@ -35,8 +37,10 @@ scale = Vector2( 0.5, 0.5 )
 [node name="fantom" parent="." instance=ExtResource( 4 )]
 position = Vector2( -2728.13, 33.7944 )
 scale = Vector2( 0.5, 0.5 )
+acc = 0.0
 
 [node name="player" parent="." instance=ExtResource( 5 )]
+position = Vector2( -1661.1, 140.092 )
 scale = Vector2( 0.5, 0.5 )
-SPEED = 200
+SPEED = 500
 JUMP = 400
