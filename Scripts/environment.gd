@@ -15,5 +15,5 @@ func _ready():
 #func _process(delta):
 #	pass
 func _process(delta):
-	if $fantom.get_slide_collision() :
+	if $fantom.get_slide_collision(0) != null :
 		print("collide")
