@@ -1,0 +1,163 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://images/Objets/Miroir/MiroirMorceau1.png" type="Texture" id=1]
+[ext_resource path="res://images/Objets/Miroir/MiroirMorceau6.png" type="Texture" id=2]
+[ext_resource path="res://images/Objets/Miroir/MiroirMorceau2.png" type="Texture" id=3]
+[ext_resource path="res://Scripts/MoveOnClick.gd" type="Script" id=4]
+[ext_resource path="res://images/Objets/Miroir/MiroirMorceau3.png" type="Texture" id=5]
+[ext_resource path="res://images/Objets/Miroir/MiroirMorceau5.png" type="Texture" id=6]
+[ext_resource path="res://images/Objets/Miroir/MiroirMorceau4.png" type="Texture" id=7]
+[ext_resource path="res://Sounds/scie.wav" type="AudioStream" id=8]
+[ext_resource path="res://Sounds/scie3.wav" type="AudioStream" id=9]
+[ext_resource path="res://Sounds/scie2.wav" type="AudioStream" id=10]
+[ext_resource path="res://Sounds/scie1.wav" type="AudioStream" id=11]
+[ext_resource path="res://Scripts/Object.gd" type="Script" id=12]
+[ext_resource path="res://Sounds/reveilPickup.wav" type="AudioStream" id=13]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 49.8904
+height = 54.514
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 33.917
+height = 54.8767
+
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 43.9701
+height = 110.264
+
+[sub_resource type="CapsuleShape2D" id=4]
+radius = 37.8514
+height = 31.8425
+
+[sub_resource type="CapsuleShape2D" id=5]
+radius = 33.0108
+height = 60.692
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 12 )
+
+[node name="Object" type="Node2D" parent="."]
+
+[node name="Morceau1" type="Node2D" parent="Object"]
+
+[node name="Area2D" type="Area2D" parent="Object/Morceau1"]
+position = Vector2( 688.052, 169.286 )
+z_index = 2
+script = ExtResource( 4 )
+dest = Vector2( 401, 80 )
+tolerance = 20.0
+soundPlayer = NodePath("../../SoundPlayer")
+
+[node name="Sprite" type="Sprite" parent="Object/Morceau1/Area2D"]
+scale = Vector2( 0.275, 0.275 )
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Object/Morceau1/Area2D"]
+position = Vector2( 3.82227, 13.5842 )
+rotation = -1.27584
+shape = SubResource( 1 )
+
+[node name="Morceau2" type="Node2D" parent="Object"]
+
+[node name="Area2D" type="Area2D" parent="Object/Morceau2"]
+position = Vector2( 606.224, 54.2752 )
+z_index = 1
+script = ExtResource( 4 )
+dest = Vector2( 577, 134 )
+tolerance = 20.0
+soundPlayer = NodePath("../../SoundPlayer")
+
+[node name="Sprite" type="Sprite" parent="Object/Morceau2/Area2D"]
+scale = Vector2( 0.275, 0.275 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Object/Morceau2/Area2D"]
+position = Vector2( 0, 6.79828 )
+rotation = -0.815069
+shape = SubResource( 2 )
+
+[node name="Morceau3" type="Node2D" parent="Object"]
+
+[node name="Area2D" type="Area2D" parent="Object/Morceau3"]
+position = Vector2( 112.573, 105.243 )
+z_index = 3
+script = ExtResource( 4 )
+dest = Vector2( 430, 154 )
+tolerance = 20.0
+soundPlayer = NodePath("../../SoundPlayer")
+
+[node name="Sprite" type="Sprite" parent="Object/Morceau3/Area2D"]
+scale = Vector2( 0.275, 0.275 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Object/Morceau3/Area2D"]
+position = Vector2( 12.0277, -1.04591 )
+rotation = -1.08036
+shape = SubResource( 3 )
+
+[node name="Morceau4" type="Node2D" parent="Object"]
+
+[node name="Area2D" type="Area2D" parent="Object/Morceau4"]
+position = Vector2( 209.146, 49.0928 )
+z_index = 4
+script = ExtResource( 4 )
+dest = Vector2( 495, 90 )
+tolerance = 20.0
+soundPlayer = NodePath("../../SoundPlayer")
+
+[node name="Sprite" type="Sprite" parent="Object/Morceau4/Area2D"]
+position = Vector2( 3.93968, -1.82991 )
+scale = Vector2( 0.275, 0.275 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Object/Morceau4/Area2D"]
+position = Vector2( -4.05463, -0.500122 )
+rotation = 1.89019
+shape = SubResource( 4 )
+
+[node name="Morceau5" type="Node2D" parent="Object"]
+
+[node name="Area2D" type="Area2D" parent="Object/Morceau5"]
+position = Vector2( 309.276, 196.95 )
+z_index = 4
+script = ExtResource( 4 )
+dest = Vector2( 577, 198 )
+tolerance = 20.0
+soundPlayer = NodePath("../../SoundPlayer")
+
+[node name="Sprite" type="Sprite" parent="Object/Morceau5/Area2D"]
+scale = Vector2( 0.275, 0.275 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Object/Morceau5/Area2D"]
+position = Vector2( 0.52298, -1.56879 )
+rotation = -1.42244
+shape = SubResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="Object"]
+position = Vector2( 505.525, 146.147 )
+scale = Vector2( 0.275, 0.275 )
+texture = ExtResource( 6 )
+
+[node name="SoundPlayer" type="Node2D" parent="Object"]
+
+[node name="Sound1" type="AudioStreamPlayer" parent="Object/SoundPlayer"]
+stream = ExtResource( 8 )
+
+[node name="Sound2" type="AudioStreamPlayer" parent="Object/SoundPlayer"]
+stream = ExtResource( 11 )
+
+[node name="Sound3" type="AudioStreamPlayer" parent="Object/SoundPlayer"]
+stream = ExtResource( 10 )
+
+[node name="Sound4" type="AudioStreamPlayer" parent="Object/SoundPlayer"]
+stream = ExtResource( 9 )
+
+[node name="Complete" type="AudioStreamPlayer" parent="Object/SoundPlayer"]
+stream = ExtResource( 13 )
+[connection signal="input_event" from="Object/Morceau1/Area2D" to="Object/Morceau1/Area2D" method="_on_Area2D_input_event"]
+[connection signal="input_event" from="Object/Morceau2/Area2D" to="Object/Morceau2/Area2D" method="_on_Area2D_input_event"]
+[connection signal="input_event" from="Object/Morceau3/Area2D" to="Object/Morceau3/Area2D" method="_on_Area2D_input_event"]
+[connection signal="input_event" from="Object/Morceau4/Area2D" to="Object/Morceau4/Area2D" method="_on_Area2D_input_event"]
+[connection signal="input_event" from="Object/Morceau5/Area2D" to="Object/Morceau5/Area2D" method="_on_Area2D_input_event"]
