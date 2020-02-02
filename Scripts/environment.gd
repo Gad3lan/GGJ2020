@@ -15,5 +15,7 @@ func _ready():
 #func _process(delta):
 #	pass
 func _process(delta):
-	if $fantom.get_slide_collision(0) != null :
-		print("collide")
+	print($fantom.position, $player.position)
+	if $fantom.position.x >= ($player.position.x):
+		print("depassement")
+		get_tree().change_scene("res://Scenes/GameOver.tscn")
