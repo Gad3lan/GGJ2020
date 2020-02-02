@@ -16,11 +16,8 @@ script = ExtResource( 1 )
 position = Vector2( -427.539, -102.238 )
 anchor_mode = 0
 current = true
-drag_margin_h_enabled = false
-drag_margin_v_enabled = false
 
 [node name="inventory" parent="cameraRig" instance=ExtResource( 2 )]
-editor/display_folded = true
 position = Vector2( -201.645, -74.6196 )
 
 [node name="ColorRect" type="ColorRect" parent="cameraRig/inventory"]
@@ -40,4 +37,4 @@ acc = 0.0
 position = Vector2( -1661.1, 140.092 )
 scale = Vector2( 0.5, 0.5 )
 SPEED = 500
-JUMP = 400
+JUMP = 950
