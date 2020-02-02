@@ -13,9 +13,9 @@ func addItemScene():
 		$nope.play()
 		return false
 	elif hasItem():#bouge les objets finis.
-		itemScene.position.x = -400 + 200 * itemCount
-		itemScene.position.y += 70
-		itemScene.scale *= 0.75
+		itemScene.position.x = -400 + 100 * itemCount%2
+		itemScene.position.y += 70 + 100 * itemCount/2
+		itemScene.scale *= 0.25
 		itemCount +=1
 	$pickUpSound.play()
 	var itemSceneSource = load("res://Scenes/"+itemName+".tscn")

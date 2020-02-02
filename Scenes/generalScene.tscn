@@ -15,4 +15,8 @@ mouse_filter = 2
 color = Color( 0, 0, 0, 1 )
 
 [node name="Environment" parent="." instance=ExtResource( 2 )]
+<<<<<<< HEAD
 position = Vector2( -321.406, 422.263 )
+=======
+position = Vector2( -272.591, 475.131 )
+>>>>>>> 1587330f396a2dcbe941ebb1fc899ec963c0b8bb
