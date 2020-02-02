@@ -3,11 +3,12 @@ extends KinematicBody2D
 export var SPEED = 20
 export var JUMP = 100
 export var G = 50
+export var jumpCoolDown = 20
 
 var velocity = Vector2()
 var on_floor = false
 var hasToIdle : bool
-
+var jumpGauge = jumpCoolDown
 
 func moveLeft():
 	print("moveLeft")
@@ -20,8 +21,7 @@ func moveLeft():
 		if velocity.x > -SPEED:
 			print("trying to air control")
 			velocity.x -= SPEED*0.05
-		
-		
+
 func moveRight():
 	print("moveRight")
 	if is_on_floor():
@@ -39,17 +39,23 @@ func idle():
 func jump():
 	if is_on_floor():
 		on_floor = false
-		$AnimatedSprite.animation = "jump"
-		velocity.y = -JUMP
+		if jumpCoolDown > jumpGauge*0.75:
+			$AnimatedSprite.animation = "jump"
+			velocity.y = -JUMP *jumpCoolDown/jumpGauge
+			jumpCoolDown = 0
+			return true
+	return false
 
 
 func  _process(delta):
+	
 	hasToIdle = true
 	if velocity.length() != 0:
 		$AnimatedSprite.play()
 	else:
 		$AnimatedSprite.stop()
-		
+	if is_on_floor() && jumpCoolDown < jumpGauge:
+		jumpCoolDown += 1
 	if Input.is_action_pressed("ui_left"):
 		moveLeft()
 		hasToIdle = false
@@ -57,19 +63,17 @@ func  _process(delta):
 		moveRight()
 		hasToIdle = false
 	if Input.is_action_pressed("ui_up") and is_on_floor():
-		jump()
-		hasToIdle = false
+		hasToIdle = not jump()
+	print(hasToIdle)
 	
-	else:
-		if (is_on_floor()):
-			if(hasToIdle):
-				idle()
-				$AudioStreamPlayer.play()
-				
-		else:
-			$AnimatedSprite.animation = "jump"
-			velocity.y +=G
+	if (is_on_floor()):
+		if(hasToIdle):
+			idle()
 			$AudioStreamPlayer.play()
-
+			
+	else:
+		$AnimatedSprite.animation = "jump"
+		velocity.y +=G
+		$AudioStreamPlayer.play()
 	move_and_slide(velocity, Vector2( 0,-1 ))
 
