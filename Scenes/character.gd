@@ -4,6 +4,7 @@ export var SPEED = 20
 export var JUMP = 100
 export var G = 50
 export var jumpCoolDown = 20
+export var walkAccelerator = 0.05
 
 var velocity = Vector2()
 var on_floor = false
@@ -16,7 +17,7 @@ func moveLeft():
 		$AnimatedSprite.animation = "walk"
 		$AnimatedSprite.flip_h = true
 		if velocity.x > -SPEED:
-			velocity.x -= SPEED * 0.08
+			velocity.x -= SPEED * walkAccelerator
 		elif velocity.x < -SPEED:
 			velocity.x = -SPEED
 	else:
@@ -31,7 +32,7 @@ func moveRight():
 		$AnimatedSprite.animation = "walk"
 		$AnimatedSprite.flip_h = false
 		if velocity.x < SPEED:
-			velocity.x += SPEED * 0.08
+			velocity.x += SPEED * walkAccelerator
 		elif velocity.x > SPEED:
 			velocity.x = +SPEED
 	else:
