@@ -13,8 +13,9 @@ func addItemScene():
 		$nope.play()
 		return false
 	elif hasItem():#bouge les objets finis.
-		itemScene.position.x = -400 + 100 * itemCount%2
-		itemScene.position.y += 70 + 100 * itemCount/2
+		itemScene.position.x = -200 + 100 * (itemCount%3)
+		itemScene.position.y += 100 * (int(itemCount)/int(3))
+		print(itemScene.position)
 		itemScene.scale *= 0.25
 		itemCount +=1
 	$pickUpSound.play()
