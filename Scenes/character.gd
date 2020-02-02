@@ -12,7 +12,6 @@ var hasToIdle : bool
 var jumpGauge = jumpCoolDown
 
 func moveLeft():
-	print("moveLeft")
 	if is_on_floor():
 		$AnimatedSprite.animation = "walk"
 		$AnimatedSprite.flip_h = true
@@ -21,13 +20,10 @@ func moveLeft():
 		elif velocity.x < -SPEED:
 			velocity.x = -SPEED
 	else:
-		print("before air control")
 		if velocity.x > -SPEED:
-			print("trying to air control")
 			velocity.x -= SPEED*0.05
 
 func moveRight():
-	print("moveRight")
 	if is_on_floor():
 		$AnimatedSprite.animation = "walk"
 		$AnimatedSprite.flip_h = false
@@ -37,7 +33,6 @@ func moveRight():
 			velocity.x = +SPEED
 	else:
 		if velocity.x < SPEED:
-			print("trying to air control")
 			velocity.x += SPEED*0.05
 func idle():
 	$AnimatedSprite.animation = "idle"
@@ -71,7 +66,6 @@ func  _process(delta):
 		hasToIdle = false
 	if Input.is_action_pressed("ui_up") and is_on_floor():
 		hasToIdle = not jump()
-	print(hasToIdle)
 	
 	if (is_on_floor()):
 		if(hasToIdle):
