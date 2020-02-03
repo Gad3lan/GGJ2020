@@ -11,10 +11,8 @@ var itemScene = null
 func moveItem():
 	itemScene.position.x = 150 * (itemCount%3)
 	itemScene.position.y += 50 + 100 * (int(itemCount)/int(3))
-	print(itemScene.position)
 	itemScene.scale *= 0.35
 	itemCount +=1
-	print(get_parent())
 	get_parent().get_parent().get_node("fantom").pullback()
 
 func addItemScene():

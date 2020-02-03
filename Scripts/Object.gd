@@ -23,7 +23,6 @@ func isComplete():
 		inventory.moveItem()
 		soundPlayer.get_node("Complete").play()
 		isRepaired = true
-		print("Complete")
 		if sceneName == "Miroir":
 			get_tree().change_scene("res://Scenes/mainPage.tscn")
 	return res

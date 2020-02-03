@@ -15,7 +15,5 @@ func _ready():
 #func _process(delta):
 #	pass
 func _process(delta):
-	print($fantom.position, $player.position)
 	if $fantom.position.x >= ($player.position.x):
-		print("depassement")
 		get_tree().change_scene("res://Scenes/GameOver.tscn")

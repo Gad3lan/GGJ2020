@@ -41,7 +41,6 @@ func pickUpAt(pos):
 			if (inventory.setItem(posItems[zone])):
 				removeFromScene(posItems[zone])
 				posItems.erase(zone)
-				print(inventory.itemCount)
 
 
 func _ready():

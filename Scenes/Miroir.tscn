@@ -36,6 +36,7 @@ height = 60.692
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 12 )
+sceneName = "Miroir"
 
 [node name="Object" type="Node2D" parent="."]
 

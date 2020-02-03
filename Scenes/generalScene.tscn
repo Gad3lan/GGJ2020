@@ -27,7 +27,7 @@ position = Vector2( 4318.44, 511.599 )
 texture = ExtResource( 3 )
 
 [node name="Environment" parent="." instance=ExtResource( 2 )]
-position = Vector2( -273.573, 473.903 )
+position = Vector2( -273.048, 478.533 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 follow_viewport_scale = 0.0

@@ -8,14 +8,13 @@ extends KinematicBody2D
 var playerToChasePath = "player"
 export (float) var acc = 2
 export (float) var pullBackDistance = 600
-export (float) var maxSpeed = 10000
+export (float) var maxSpeed = 1000
 
 var velocity = Vector2(0,0)
 var maxSpeedInv = 1/maxSpeed
 onready var playerToChase = get_parent().get_node("player")
 
 func pullback():
-	print("pullback")
 	position.x -= pullBackDistance
 
 func playerDirection():
@@ -23,6 +22,7 @@ func playerDirection():
 
 func moveVector(delta):
 	velocity = (velocity + (acc*playerDirection())) *(1- velocity.length() * maxSpeedInv)
+	velocity.x = min(velocity.x, 100)
 	return velocity
 
 func _process(delta):
