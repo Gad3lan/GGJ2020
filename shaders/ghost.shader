@@ -1,7 +1,7 @@
 shader_type canvas_item;
 
 uniform vec2 offset = vec2(8,8);
-uniform vec4 modulate:hint_color;
+
 float rand(vec2 coord){
 	return fract(sin(dot(coord, vec2(56, 78)) * 1000.0) * 1000.0);
 }
@@ -24,9 +24,9 @@ float noise(vec2 coord){
 
 void fragment(){
     vec2 ps = TEXTURE_PIXEL_SIZE;
-	
-    vec4 shadow = vec4(modulate.rgb, texture(TEXTURE, UV - offset*ps).a*modulate.a);
-    vec4 col = texture(TEXTURE, UV);
-	col.a *= noise((UV+vec2(sin(TIME) * fract(TIME/10.),cos(TIME/10.) * fract(TIME)))*8.);
+	vec2 timeFactRot = vec2(sin(TIME/2.),cos(TIME/2.));
+	vec2 uv = 0.05+-0.1*noise((UV+timeFactRot)*10.)+UV;
+    vec4 col = texture(TEXTURE, uv);
+	col.a *= noise((UV+timeFactRot)*8.);
     COLOR = col;
 }
