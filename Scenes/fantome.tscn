@@ -38,7 +38,7 @@ script = ExtResource( 2 )
 position = Vector2( -7.25415, -145.083 )
 stream = ExtResource( 3 )
 autoplay = true
-attenuation = 2.37841
+attenuation = 5.27802
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 2 )
@@ -47,5 +47,6 @@ shape = SubResource( 2 )
 material = SubResource( 5 )
 position = Vector2( -154.506, 69.449 )
 frames = SubResource( 4 )
+frame = 1
 playing = true
 flip_h = true
