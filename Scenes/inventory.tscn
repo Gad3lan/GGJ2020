@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scripts/inventory.gd" type="Script" id=1]
 [ext_resource path="res://Sounds/Enregistrements/peluche debut.wav" type="AudioStream" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Sounds/Enregistrements/instrument debut.wav" type="AudioStream" id=6]
 [ext_resource path="res://Sounds/Enregistrements/mirroir debut.wav" type="AudioStream" id=7]
 [ext_resource path="res://Sounds/Enregistrements/Reveil debut.wav" type="AudioStream" id=8]
+[ext_resource path="res://Sounds/Enregistrements/theiere debut.wav" type="AudioStream" id=9]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
@@ -28,7 +29,7 @@ stream = ExtResource( 8 )
 stream = ExtResource( 5 )
 
 [node name="TheiereSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 5 )
+stream = ExtResource( 9 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 957.006, 247.005 )

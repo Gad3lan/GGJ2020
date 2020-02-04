@@ -14,7 +14,7 @@ export (float) var fadeTime = 1.5
 var pullBackTimer = 0
 
 var velocity = Vector2(0,0)
-var maxSpeedInv = 1/maxSpeed
+var maxSpeedInv = 1.0/maxSpeed
 onready var playerToChase = get_parent().get_node("player")
 var hasToPullBack = false
 func pullbackForReal():
@@ -31,8 +31,7 @@ func moveVector(delta):
 	if (playerToChase == null):
 		return Vector2(0,0)
 	
-	velocity = (velocity + (acc*playerDirection())) *(1- velocity.length() * maxSpeedInv)
-	velocity.x = min(velocity.x, 100)
+	velocity = (velocity + (acc*playerDirection())) * (1.0- velocity.length() * maxSpeedInv)
 	return velocity
 
 func handlePullback(delta):
