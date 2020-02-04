@@ -9,10 +9,9 @@ var playerToChasePath = "player"
 export (float) var acc = 2
 export (float) var pullBackDistance = 600
 export (float) var maxSpeed = 1000
-export (float) var pullBackTime = 50
+export (float) var fadeTime = 1.5
 
 var pullBackTimer = 0
-const fadeTime = 1.5
 
 var velocity = Vector2(0,0)
 var maxSpeedInv = 1/maxSpeed
@@ -36,18 +35,17 @@ func moveVector(delta):
 	velocity.x = min(velocity.x, 100)
 	return velocity
 
+func handlePullback(delta):
+	pullBackTimer+= delta
+	$AnimatedSprite.material.set_shader_param("Wrapping",1+4*pow(pullBackTimer/fadeTime,4))
+	if (pullBackTimer >= fadeTime):
+		pullbackForReal()
+		pullBackTimer=0
+		$AnimatedSprite.material.set_shader_param("Wrapping",1)
+
 func _process(delta):
-	
 	if hasToPullBack:
-		pullBackTimer+= delta
-		print(pullBackTimer)
-		print($AnimatedSprite.material.get_shader_param("Wrapping"))
-		print("\n")
-		$AnimatedSprite.material.set_shader_param("Wrapping",1+4*pow(pullBackTimer/fadeTime,4))
-		if (pullBackTimer >= fadeTime):
-			pullbackForReal()
-			pullBackTimer=0
-			$AnimatedSprite.material.set_shader_param("Wrapping",1)
+		handlePullback(delta)
 	else:
 		move_and_slide(moveVector(delta))
 
