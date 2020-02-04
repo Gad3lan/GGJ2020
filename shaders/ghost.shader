@@ -1,6 +1,8 @@
 shader_type canvas_item;
 
-uniform vec2 offset = vec2(8,8);
+uniform vec2 Offset = vec2(8,8);
+uniform vec4 WrappingColor :hint_color;
+uniform float Wrapping;
 
 float rand(vec2 coord){
 	return fract(sin(dot(coord, vec2(56, 78)) * 1000.0) * 1000.0);
@@ -24,9 +26,13 @@ float noise(vec2 coord){
 
 void fragment(){
     vec2 ps = TEXTURE_PIXEL_SIZE;
-	vec2 timeFactRot = vec2(sin(TIME/2.),cos(TIME/2.));
-	vec2 uv = 0.05+-0.1*noise((UV+timeFactRot)*10.)+UV;
+	vec2 timeFactRot = vec2(sin(TIME/5.),cos(TIME/5.));
+	float inversesWrapping = 1./Wrapping;
+	vec2 uv = -0.25+(0.05+-0.1*noise((UV-timeFactRot*2.)*8.)+UV-0.5)*Wrapping*Wrapping+0.5*inversesWrapping;
     vec4 col = texture(TEXTURE, uv);
-	col.a *= noise((UV+timeFactRot)*8.);
+	col = mix(col,WrappingColor,col.a*(1.-inversesWrapping));
+	col.a *= inversesWrapping;
+	col.a *= noise((uv+timeFactRot)*8.);
+	 
     COLOR = col;
 }

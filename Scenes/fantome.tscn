@@ -9,14 +9,18 @@
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 1 )
-shader_param/offset = Vector2( 8, 8 )
+shader_param/Offset = Vector2( 8, 8 )
+shader_param/WrappingColor = null
+shader_param/Wrapping = null
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 164.142, 174.163 )
 
 [sub_resource type="ShaderMaterial" id=5]
 shader = ExtResource( 1 )
-shader_param/offset = Vector2( 8, 8 )
+shader_param/Offset = Vector2( 8, 8 )
+shader_param/WrappingColor = Color( 0.054902, 0.435294, 0.0509804, 1 )
+shader_param/Wrapping = 1.0
 
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
@@ -41,8 +45,7 @@ shape = SubResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 material = SubResource( 5 )
-position = Vector2( -300.702, 310.402 )
+position = Vector2( -154.506, 69.449 )
 frames = SubResource( 4 )
-frame = 2
 playing = true
 flip_h = true
