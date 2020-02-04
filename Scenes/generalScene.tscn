@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/environmentItemInteraction.gd" type="Script" id=1]
-[ext_resource path="res://Scenes/environment.tscn" type="PackedScene" id=2]
-[ext_resource path="res://images/FondBoucleArbres.png" type="Texture" id=3]
+[ext_resource path="res://images/FondBoucleArbres.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/environment.tscn" type="PackedScene" id=3]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
@@ -12,24 +12,23 @@ __meta__ = {
 
 [node name="FondBoucleArbres" type="Sprite" parent="."]
 position = Vector2( -2481.39, 511.599 )
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 
 [node name="FondBoucleArbres2" type="Sprite" parent="."]
 position = Vector2( -215.228, 511.599 )
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 
 [node name="FondBoucleArbres3" type="Sprite" parent="."]
 position = Vector2( 2051.72, 511.599 )
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 
 [node name="FondBoucleArbres4" type="Sprite" parent="."]
 position = Vector2( 4318.44, 511.599 )
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 
-[node name="Environment" parent="." instance=ExtResource( 2 )]
-position = Vector2( -273.048, 478.533 )
+[node name="Environment" parent="." instance=ExtResource( 3 )]
+position = Vector2( -273.573, 473.903 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-follow_viewport_scale = 0.0
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
