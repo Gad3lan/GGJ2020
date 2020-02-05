@@ -11,8 +11,8 @@ const Zone = preload("itemZone.gd")
 const InventoryScene = preload("res://Scenes/inventory.tscn")
 var inventory
 var posItems = {
-				Zone.new(Vector2(-2400,0)):"Bombarde",
-				Zone.new(Vector2(-1400,0)):"Crabe",
+				Zone.new(Vector2(-2400,0)):"Crabe",
+				Zone.new(Vector2(-1400,0)):"Bombarde",
 				Zone.new(Vector2(500,0)):"Theiere",
 				Zone.new(Vector2(1340,0)):"Tableau",
 				Zone.new(Vector2(1800,0)):"Reveil",
@@ -44,7 +44,6 @@ func pickUpAt(pos):
 
 
 func _ready():
-	addZoneWithItem(Zone.new(Vector2(1,1)),"Reveil")
 	inventory = $Environment.get_node("cameraRig/inventory")
 	pass # Replace with function body.
 

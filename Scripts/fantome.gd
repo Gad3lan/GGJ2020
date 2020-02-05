@@ -46,7 +46,7 @@ func _process(delta):
 	if hasToPullBack:
 		handlePullback(delta)
 	else:
-		move_and_slide(moveVector(delta))
+		move_and_collide(delta*moveVector(delta))
 
 
 func _ready():
