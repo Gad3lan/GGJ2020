@@ -13,10 +13,10 @@ shader_param/Offset = Vector2( 8, 8 )
 shader_param/WrappingColor = null
 shader_param/Wrapping = null
 
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 164.142, 174.163 )
+[sub_resource type="CircleShape2D" id=2]
+radius = 157.829
 
-[sub_resource type="ShaderMaterial" id=5]
+[sub_resource type="ShaderMaterial" id=3]
 shader = ExtResource( 1 )
 shader_param/Offset = Vector2( 8, 8 )
 shader_param/WrappingColor = Color( 0.054902, 0.435294, 0.0509804, 1 )
@@ -41,12 +41,12 @@ autoplay = true
 attenuation = 5.27802
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -96.6603, -1.91406 )
 shape = SubResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-material = SubResource( 5 )
+material = SubResource( 3 )
 position = Vector2( -154.506, 69.449 )
 frames = SubResource( 4 )
-frame = 1
 playing = true
 flip_h = true

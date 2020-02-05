@@ -46,7 +46,11 @@ func _process(delta):
 	if hasToPullBack:
 		handlePullback(delta)
 	else:
-		move_and_collide(delta*moveVector(delta))
+		move_and_slide(moveVector(delta))
+		for i in range (get_slide_count()):
+			var collidingBody = get_slide_collision(i).get_collider()
+			if collidingBody == playerToChase:
+				get_tree().change_scene("Scenes/GameOver.tscn")
 
 
 func _ready():
