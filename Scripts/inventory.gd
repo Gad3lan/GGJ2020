@@ -8,18 +8,23 @@ var itemCount : int = 0
 var itemName
 var itemScene = null
 
+func winGame():
+	get_tree().change_scene("res://Scenes/mainPage.tscn")
+
+
 func moveItem():
 	itemScene.position.x = 150 * (itemCount%3)
 	itemScene.position.y += 50 + 100 * (int(itemCount)/int(3))
 	itemScene.scale *= 0.35
 	itemCount +=1
 	get_parent().get_parent().get_node("fantom").pullback()
+	if (itemCount == 6):
+		winGame()
 
 func addItemScene():
 	if not isItemRepaired():
 		$nope.play()
 		return false
-	
 	var soundName = itemName + "Sound"
 	get_node(soundName).play()
 	var itemSceneSource = load("res://Scenes/"+itemName+".tscn")
