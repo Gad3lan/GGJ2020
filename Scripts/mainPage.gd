@@ -16,7 +16,11 @@ func _ready():
 #	pass
 
 func _on_TextureButton3_pressed():
-	get_tree().change_scene("res://Scenes/Controls.tscn")
+	if (not get_node("/root/Global_var").alreadyPlayedIntro):
+		get_node("/root/Global_var").alreadyPlayedIntro = true
+		get_tree().change_scene("res://Scenes/IntroCinematic.tscn")
+	else:
+		get_tree().change_scene("res://Scenes/Controls.tscn")
 
 
 func _on_Exit_pressed():

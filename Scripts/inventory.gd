@@ -9,10 +9,11 @@ var itemName
 var itemScene = null
 
 func winGame():
-	get_tree().change_scene("res://Scenes/mainPage.tscn")
+	get_tree().change_scene("res://Scenes/OutroCinematic.tscn")
 
 
 func moveItem():
+	winGame()
 	itemScene.position.x = 150 * (itemCount%3)
 	itemScene.position.y += 50 + 100 * (int(itemCount)/int(3))
 	itemScene.scale *= 0.35

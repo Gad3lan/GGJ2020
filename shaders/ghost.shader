@@ -34,6 +34,5 @@ void fragment(){
 	col = mix(col,WrappingColor,col.a*(1.-inversesWrapping));
 	col.a *= inversesWrapping;
 	col.a *= noise((uv+timeFactRot)*8.);
-	 
     COLOR = col;
 }

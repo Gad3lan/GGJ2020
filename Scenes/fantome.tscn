@@ -10,8 +10,8 @@
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 1 )
 shader_param/Offset = Vector2( 8, 8 )
-shader_param/WrappingColor = null
-shader_param/Wrapping = null
+shader_param/WrappingColor = Color( 0.890196, 0.329412, 0.854902, 1 )
+shader_param/Wrapping = 0.0
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 157.829
@@ -19,7 +19,7 @@ radius = 157.829
 [sub_resource type="ShaderMaterial" id=3]
 shader = ExtResource( 1 )
 shader_param/Offset = Vector2( 8, 8 )
-shader_param/WrappingColor = Color( 0.054902, 0.435294, 0.0509804, 1 )
+shader_param/WrappingColor = Color( 0.243137, 1, 0.243137, 1 )
 shader_param/Wrapping = 1.0
 
 [sub_resource type="SpriteFrames" id=4]

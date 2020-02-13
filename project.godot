@@ -36,6 +36,10 @@ config/name="Remind to Repair"
 run/main_scene="res://Scenes/mainPage.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Global_var="*res://Scripts/Global_var.gd"
+
 [display]
 
 window/size/width=1920
