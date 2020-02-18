@@ -13,7 +13,6 @@ func winGame():
 
 
 func moveItem():
-	winGame()
 	itemScene.position.x = 150 * (itemCount%3)
 	itemScene.position.y += 50 + 100 * (int(itemCount)/int(3))
 	itemScene.scale *= 0.35

@@ -6,7 +6,7 @@ extends KinematicBody2D
 
 # Called when the node enters the scene tree for the first time.
 var playerToChasePath = "player"
-export (float) var acc = 2
+export (float) var acc = 5
 export (float) var pullBackDistance = 600
 export (float) var maxSpeed = 1000
 export (float) var fadeTime = 1.5
