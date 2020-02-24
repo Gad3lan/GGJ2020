@@ -34,7 +34,7 @@ _global_script_class_icons={
 
 config/name="Remind to Repair"
 run/main_scene="res://Scenes/mainPage.tscn"
-config/icon="res://icon.png"
+config/icon="res://images/icone.png"
 
 [autoload]
 
