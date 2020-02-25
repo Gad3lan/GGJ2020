@@ -48,7 +48,8 @@ func _on_Area2D_input_event(viewport, event, _shape_idx):
 					var soundNode = get_node(soundPlayer)
 					if soundNode != null:
 						var s = "Sound" + str(randi()%4 + 1)
-						if not main.isComplete():
+						
+						if main != null and not main.isComplete():
 							soundNode.get_node(s).play()
 				else:
 					pos = origin
