@@ -2,17 +2,17 @@
 
 [ext_resource path="res://Scripts/Object.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/MoveOnClick.gd" type="Script" id=2]
-[ext_resource path="res://images/Objets/Bombarde/BombardeMorceau3.png" type="Texture" id=3]
-[ext_resource path="res://images/Objets/Bombarde/BombardeMorceau2.png" type="Texture" id=4]
-[ext_resource path="res://images/Objets/Bombarde/BombardeMorceau1.png" type="Texture" id=5]
-[ext_resource path="res://images/Objets/Bombarde/BombardeMorceau4.png" type="Texture" id=6]
-[ext_resource path="res://images/Objets/Bombarde/BombardeMorceau5.png" type="Texture" id=7]
-[ext_resource path="res://Sounds/scie.wav" type="AudioStream" id=8]
-[ext_resource path="res://Sounds/scie1.wav" type="AudioStream" id=9]
-[ext_resource path="res://Sounds/scie2.wav" type="AudioStream" id=10]
-[ext_resource path="res://Sounds/scie3.wav" type="AudioStream" id=11]
-[ext_resource path="res://Sounds/Enregistrements/instrument fin.wav" type="AudioStream" id=12]
-[ext_resource path="res://images/Objets/Bombarde/BombardeMorceau6.png" type="Texture" id=13]
+[ext_resource path="res://images/Objets/Bombarde/BombardeMorceau2.png" type="Texture" id=3]
+[ext_resource path="res://images/Objets/Bombarde/BombardeMorceau3.png" type="Texture" id=4]
+[ext_resource path="res://images/Objets/Bombarde/BombardeMorceau4.png" type="Texture" id=5]
+[ext_resource path="res://images/Objets/Bombarde/BombardeMorceau6.png" type="Texture" id=6]
+[ext_resource path="res://images/Objets/Bombarde/BombardeMorceau1.png" type="Texture" id=7]
+[ext_resource path="res://images/Objets/Bombarde/BombardeMorceau5.png" type="Texture" id=8]
+[ext_resource path="res://Sounds/scie.wav" type="AudioStream" id=9]
+[ext_resource path="res://Sounds/scie1.wav" type="AudioStream" id=10]
+[ext_resource path="res://Sounds/scie2.wav" type="AudioStream" id=11]
+[ext_resource path="res://Sounds/scie3.wav" type="AudioStream" id=12]
+[ext_resource path="res://Sounds/Enregistrements/instrument fin.wav" type="AudioStream" id=13]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 28.0607
@@ -55,7 +55,7 @@ soundPlayer = NodePath("../../SoundPlayer")
 
 [node name="Sprite" type="Sprite" parent="Object/Morceau1/Area2D"]
 scale = Vector2( 0.275, 0.275 )
-texture = ExtResource( 4 )
+texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Object/Morceau1/Area2D"]
 position = Vector2( -3.16251, 0.987137 )
@@ -78,7 +78,7 @@ soundPlayer = NodePath("../../SoundPlayer")
 
 [node name="Sprite" type="Sprite" parent="Object/Morceau2/Area2D"]
 scale = Vector2( 0.275, 0.275 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Object/Morceau2/Area2D"]
 position = Vector2( -3.8147e-06, 0 )
@@ -100,7 +100,7 @@ soundPlayer = NodePath("../../SoundPlayer")
 
 [node name="Sprite" type="Sprite" parent="Object/Morceau3/Area2D"]
 scale = Vector2( 0.275, 0.275 )
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Object/Morceau3/Area2D"]
 position = Vector2( -1, 0.999977 )
@@ -123,7 +123,7 @@ soundPlayer = NodePath("../../SoundPlayer")
 [node name="Sprite" type="Sprite" parent="Object/Morceau4/Area2D"]
 position = Vector2( 3.93968, -1.82991 )
 scale = Vector2( 0.275, 0.275 )
-texture = ExtResource( 13 )
+texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Object/Morceau4/Area2D"]
 position = Vector2( 7.37609, -0.592651 )
@@ -146,7 +146,7 @@ soundPlayer = NodePath("../../SoundPlayer")
 [node name="Sprite" type="Sprite" parent="Object/Morceau5/Area2D"]
 position = Vector2( 3.93968, -1.82991 )
 scale = Vector2( 0.275, 0.275 )
-texture = ExtResource( 5 )
+texture = ExtResource( 7 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Object/Morceau5/Area2D"]
 position = Vector2( 5.04199, -2.521 )
@@ -156,24 +156,25 @@ shape = SubResource( 5 )
 [node name="Sprite" type="Sprite" parent="Object"]
 position = Vector2( 503.605, 155.029 )
 scale = Vector2( 0.275, 0.275 )
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 
 [node name="SoundPlayer" type="Node2D" parent="Object"]
 
 [node name="Sound1" type="AudioStreamPlayer" parent="Object/SoundPlayer"]
-stream = ExtResource( 8 )
+stream = ExtResource( 9 )
+volume_db = -3.514
 
 [node name="Sound2" type="AudioStreamPlayer" parent="Object/SoundPlayer"]
-stream = ExtResource( 9 )
-
-[node name="Sound3" type="AudioStreamPlayer" parent="Object/SoundPlayer"]
 stream = ExtResource( 10 )
 
-[node name="Sound4" type="AudioStreamPlayer" parent="Object/SoundPlayer"]
+[node name="Sound3" type="AudioStreamPlayer" parent="Object/SoundPlayer"]
 stream = ExtResource( 11 )
 
-[node name="Complete" type="AudioStreamPlayer" parent="Object/SoundPlayer"]
+[node name="Sound4" type="AudioStreamPlayer" parent="Object/SoundPlayer"]
 stream = ExtResource( 12 )
+
+[node name="Complete" type="AudioStreamPlayer" parent="Object/SoundPlayer"]
+stream = ExtResource( 13 )
 volume_db = 24.0
 [connection signal="input_event" from="Object/Morceau1/Area2D" to="Object/Morceau1/Area2D" method="_on_Area2D_input_event"]
 [connection signal="input_event" from="Object/Morceau2/Area2D" to="Object/Morceau2/Area2D" method="_on_Area2D_input_event"]

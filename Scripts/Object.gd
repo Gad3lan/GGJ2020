@@ -21,7 +21,7 @@ func isComplete():
 		res = res and child.get("isLocked")
 	if res:
 		inventory.moveItem()
-		soundPlayer.get_node("Complete").play()
+		#soundPlayer.get_node("Complete").play()
 		isRepaired = true
 	return res
 

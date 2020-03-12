@@ -1,17 +1,17 @@
 [gd_scene load_steps=19 format=2]
 
-[ext_resource path="res://images/Objets/Theiere/base.png" type="Texture" id=1]
-[ext_resource path="res://images/Objets/Theiere/morceau1.png" type="Texture" id=2]
-[ext_resource path="res://images/Objets/Theiere/morceau3.png" type="Texture" id=3]
-[ext_resource path="res://Scripts/MoveOnClick.gd" type="Script" id=4]
-[ext_resource path="res://images/Objets/Theiere/morceau4.png" type="Texture" id=5]
-[ext_resource path="res://images/Objets/Theiere/morceau2.png" type="Texture" id=6]
+[ext_resource path="res://Scripts/Object.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/MoveOnClick.gd" type="Script" id=2]
+[ext_resource path="res://images/Objets/Theiere/morceau1.png" type="Texture" id=3]
+[ext_resource path="res://images/Objets/Theiere/morceau2.png" type="Texture" id=4]
+[ext_resource path="res://images/Objets/Theiere/morceau3.png" type="Texture" id=5]
+[ext_resource path="res://images/Objets/Theiere/morceau4.png" type="Texture" id=6]
 [ext_resource path="res://images/Objets/Theiere/morceau5.png" type="Texture" id=7]
-[ext_resource path="res://Sounds/scie.wav" type="AudioStream" id=8]
-[ext_resource path="res://Sounds/scie3.wav" type="AudioStream" id=9]
-[ext_resource path="res://Sounds/scie2.wav" type="AudioStream" id=10]
-[ext_resource path="res://Sounds/scie1.wav" type="AudioStream" id=11]
-[ext_resource path="res://Scripts/Object.gd" type="Script" id=12]
+[ext_resource path="res://images/Objets/Theiere/base.png" type="Texture" id=8]
+[ext_resource path="res://Sounds/scie.wav" type="AudioStream" id=9]
+[ext_resource path="res://Sounds/scie1.wav" type="AudioStream" id=10]
+[ext_resource path="res://Sounds/scie2.wav" type="AudioStream" id=11]
+[ext_resource path="res://Sounds/scie3.wav" type="AudioStream" id=12]
 [ext_resource path="res://Sounds/Enregistrements/theiere fin.wav" type="AudioStream" id=13]
 
 [sub_resource type="CapsuleShape2D" id=1]
@@ -33,7 +33,7 @@ radius = 14.4467
 radius = 18.3534
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource( 12 )
+script = ExtResource( 1 )
 
 [node name="Object" type="Node2D" parent="."]
 
@@ -42,14 +42,14 @@ script = ExtResource( 12 )
 [node name="Area2D" type="Area2D" parent="Object/Morceau1"]
 position = Vector2( 792.182, 86.3254 )
 z_index = 2
-script = ExtResource( 4 )
+script = ExtResource( 2 )
 dest = Vector2( 528, 112 )
 tolerance = 20.0
 soundPlayer = NodePath("../../SoundPlayer")
 
 [node name="Sprite" type="Sprite" parent="Object/Morceau1/Area2D"]
 scale = Vector2( 0.275, 0.275 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Object/Morceau1/Area2D"]
 position = Vector2( -3.49896, 2.07944 )
@@ -61,14 +61,14 @@ shape = SubResource( 1 )
 [node name="Area2D" type="Area2D" parent="Object/Morceau2"]
 position = Vector2( 684.854, 196.301 )
 z_index = 1
-script = ExtResource( 4 )
+script = ExtResource( 2 )
 dest = Vector2( 481, 161 )
 tolerance = 20.0
 soundPlayer = NodePath("../../SoundPlayer")
 
 [node name="Sprite" type="Sprite" parent="Object/Morceau2/Area2D"]
 scale = Vector2( 0.275, 0.275 )
-texture = ExtResource( 6 )
+texture = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Object/Morceau2/Area2D"]
 position = Vector2( -3.8147e-06, 0 )
@@ -80,14 +80,14 @@ shape = SubResource( 2 )
 [node name="Area2D" type="Area2D" parent="Object/Morceau3"]
 position = Vector2( 251.556, 86.3255 )
 z_index = 3
-script = ExtResource( 4 )
+script = ExtResource( 2 )
 dest = Vector2( 508, 147 )
 tolerance = 20.0
 soundPlayer = NodePath("../../SoundPlayer")
 
 [node name="Sprite" type="Sprite" parent="Object/Morceau3/Area2D"]
 scale = Vector2( 0.275, 0.275 )
-texture = ExtResource( 3 )
+texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Object/Morceau3/Area2D"]
 position = Vector2( -4.88758e-06, -2.2769e-05 )
@@ -98,7 +98,7 @@ shape = SubResource( 3 )
 [node name="Area2D" type="Area2D" parent="Object/Morceau4"]
 position = Vector2( 300.058, 239.438 )
 z_index = 4
-script = ExtResource( 4 )
+script = ExtResource( 2 )
 dest = Vector2( 500, 56 )
 tolerance = 20.0
 nextMovable = NodePath("../../Morceau1/Area2D")
@@ -107,7 +107,7 @@ soundPlayer = NodePath("../../SoundPlayer")
 [node name="Sprite" type="Sprite" parent="Object/Morceau4/Area2D"]
 position = Vector2( 3.93968, -1.82991 )
 scale = Vector2( 0.275, 0.275 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Object/Morceau4/Area2D"]
 position = Vector2( 3.78952, -1.54602 )
@@ -119,7 +119,7 @@ shape = SubResource( 4 )
 [node name="Area2D" type="Area2D" parent="Object/Morceau5"]
 position = Vector2( 372.598, 94.2935 )
 z_index = 4
-script = ExtResource( 4 )
+script = ExtResource( 2 )
 dest = Vector2( 527, 47 )
 tolerance = 20.0
 nextMovable = NodePath("../../Morceau1/Area2D")
@@ -137,21 +137,21 @@ shape = SubResource( 5 )
 [node name="Sprite" type="Sprite" parent="Object"]
 position = Vector2( 513.369, 181.707 )
 scale = Vector2( 0.275, 0.275 )
-texture = ExtResource( 1 )
+texture = ExtResource( 8 )
 
 [node name="SoundPlayer" type="Node2D" parent="Object"]
 
 [node name="Sound1" type="AudioStreamPlayer" parent="Object/SoundPlayer"]
-stream = ExtResource( 8 )
+stream = ExtResource( 9 )
 
 [node name="Sound2" type="AudioStreamPlayer" parent="Object/SoundPlayer"]
-stream = ExtResource( 11 )
-
-[node name="Sound3" type="AudioStreamPlayer" parent="Object/SoundPlayer"]
 stream = ExtResource( 10 )
 
+[node name="Sound3" type="AudioStreamPlayer" parent="Object/SoundPlayer"]
+stream = ExtResource( 11 )
+
 [node name="Sound4" type="AudioStreamPlayer" parent="Object/SoundPlayer"]
-stream = ExtResource( 9 )
+stream = ExtResource( 12 )
 
 [node name="Complete" type="AudioStreamPlayer" parent="Object/SoundPlayer"]
 stream = ExtResource( 13 )

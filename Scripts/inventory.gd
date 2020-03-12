@@ -26,7 +26,7 @@ func addItemScene():
 		$nope.play()
 		return false
 	var soundName = itemName + "Sound"
-	get_node(soundName).play()
+	#get_node(soundName).play()
 	var itemSceneSource = load("res://Scenes/"+itemName+".tscn")
 	itemScene = itemSceneSource.instance()
 	itemScene.inventory = self

@@ -2,12 +2,12 @@
 
 [ext_resource path="res://Scripts/Object.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/MoveOnClick.gd" type="Script" id=2]
-[ext_resource path="res://images/Objets/Reveil/ReveilPetiteAiguille.png" type="Texture" id=3]
-[ext_resource path="res://images/Objets/Reveil/ReveilGrandeAiguilles.png" type="Texture" id=4]
-[ext_resource path="res://images/Objets/Reveil/ReveilEngrenage.png" type="Texture" id=5]
-[ext_resource path="res://images/Objets/Reveil/ReveilCasse.png" type="Texture" id=6]
-[ext_resource path="res://images/Objets/Reveil/ReveilCadran.png" type="Texture" id=7]
-[ext_resource path="res://images/Objets/Reveil/ReveilCloche.png" type="Texture" id=8]
+[ext_resource path="res://images/Objets/Reveil/ReveilEngrenage.png" type="Texture" id=3]
+[ext_resource path="res://images/Objets/Reveil/ReveilCloche.png" type="Texture" id=4]
+[ext_resource path="res://images/Objets/Reveil/ReveilCadran.png" type="Texture" id=5]
+[ext_resource path="res://images/Objets/Reveil/ReveilPetiteAiguille.png" type="Texture" id=6]
+[ext_resource path="res://images/Objets/Reveil/ReveilGrandeAiguilles.png" type="Texture" id=7]
+[ext_resource path="res://images/Objets/Reveil/ReveilCasse.png" type="Texture" id=8]
 [ext_resource path="res://Sounds/scie.wav" type="AudioStream" id=9]
 [ext_resource path="res://Sounds/scie1.wav" type="AudioStream" id=10]
 [ext_resource path="res://Sounds/scie2.wav" type="AudioStream" id=11]
@@ -49,7 +49,7 @@ soundPlayer = NodePath("../../SoundPlayer")
 [node name="Sprite" type="Sprite" parent="Object/Engrenage/Area2D"]
 position = Vector2( 0.115845, -0.752991 )
 scale = Vector2( 0.29, 0.29 )
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Object/Engrenage/Area2D"]
 position = Vector2( 1, -2 )
@@ -67,7 +67,7 @@ soundPlayer = NodePath("../../SoundPlayer")
 
 [node name="Sprite" type="Sprite" parent="Object/Cloche/Area2D"]
 scale = Vector2( 0.275, 0.275 )
-texture = ExtResource( 8 )
+texture = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Object/Cloche/Area2D"]
 position = Vector2( -3.80802, -6.37717 )
@@ -88,7 +88,7 @@ soundPlayer = NodePath("../../SoundPlayer")
 [node name="Sprite" type="Sprite" parent="Object/Cadran/Area2D"]
 position = Vector2( 1.22376, 3.58933 )
 scale = Vector2( 0.26815, 0.26815 )
-texture = ExtResource( 7 )
+texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Object/Cadran/Area2D"]
 position = Vector2( 0.146006, 3.15023 )
@@ -108,7 +108,7 @@ soundPlayer = NodePath("../../SoundPlayer")
 
 [node name="Sprite" type="Sprite" parent="Object/Petite aiguille/Area2D"]
 scale = Vector2( 0.275, 0.275 )
-texture = ExtResource( 3 )
+texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Object/Petite aiguille/Area2D"]
 position = Vector2( -0.373405, -1.59558 )
@@ -128,7 +128,7 @@ soundPlayer = NodePath("../../SoundPlayer")
 
 [node name="Sprite" type="Sprite" parent="Object/Grande Aiguille/Area2D"]
 scale = Vector2( 0.275, 0.275 )
-texture = ExtResource( 4 )
+texture = ExtResource( 7 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Object/Grande Aiguille/Area2D"]
 position = Vector2( -2.64351, -3.73882 )
@@ -138,7 +138,7 @@ shape = SubResource( 5 )
 [node name="Sprite" type="Sprite" parent="Object"]
 position = Vector2( 496.068, 137.964 )
 scale = Vector2( 0.26, 0.26 )
-texture = ExtResource( 6 )
+texture = ExtResource( 8 )
 
 [node name="SoundPlayer" type="Node2D" parent="Object"]
 
